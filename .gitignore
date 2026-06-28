@@ -1,0 +1,13 @@
+# Data (downloaded separately, never committed)
+data/
+
+# Python / venv
+.venv/
+__pycache__/
+*.pyc
+
+# Marimo session cache
+__marimo__/
+
+# OS junk
+.DS_Store
