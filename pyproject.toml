@@ -3,12 +3,16 @@ name = "kinetic-typography"
 version = "0.1.0"
 requires-python = ">=3.13"
 dependencies = [
+    "h5py>=3.16.0",
     "librosa>=0.11.0",
     "marimo>=0.23.11",
     "numpy>=2.4.6",
     "pandas>=3.0.3",
     "praat-parselmouth>=0.4.7",
+    "requests>=2.34.2",
+    "tqdm>=4.68.3",
     "ty>=0.0.55",
+    "validators>=0.35.0",
     "whisperx>=3.8.6",
 ]
 

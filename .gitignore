@@ -11,3 +11,5 @@ __marimo__/
 
 # OS junk
 .DS_Store
+data/mosei/
+data/meld/
