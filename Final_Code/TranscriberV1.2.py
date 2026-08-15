@@ -6612,8 +6612,8 @@ def _(Path, VERSION_TAG, json, os, re, subprocess):
     # functions; EmoLex screening opens a 14 MB lexicon off disk. Sharing a
     # cell meant editing PLAIN_SPEC re-read the lexicon, which is the sort
     # of tax that makes people stop editing dials.
-    SOURCE_VIDEO_DIR = "source_clips_raw"
-    EVAL_OUT_DIR = "evaluationoutput"
+    SOURCE_VIDEO_DIR = str(Path(__file__).resolve().parent.parent / "source_clips_raw")
+    EVAL_OUT_DIR = str(Path(__file__).resolve().parent.parent / "evaluationoutput")
     VIDEO_EXTS = {".mp4", ".mov", ".mkv", ".avi", ".m4v", ".webm"}
 
     # Output naming: "{stem}{VERSION_TAG}_withUniqueSubtitles". VERSION_TAG
