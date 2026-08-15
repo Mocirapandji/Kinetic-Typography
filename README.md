@@ -177,7 +177,6 @@ via Supplementary Materials.
 ## Supplementary Materials
 Large files that don't fit on GitHub live in a shared Google Drive folder:
 [https://drive.google.com/drive/folders/1AetMzZlmX-mcCO5W5b0InimW9omcbT8V?usp=sharing](https://drive.google.com/drive/folders/1AetMzZlmX-mcCO5W5b0InimW9omcbT8V?usp=drive_link)
-(shared with module supervisor, not public — contains copyrighted test clips).
 
 - `Classifier_MODELWEIGHTS/` — `clf_v3.joblib` (260MB) and `clf_v2.joblib`,
   the saved emotion classifier bundles referenced in Section 4.1 of the
