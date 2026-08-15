@@ -115,7 +115,3 @@ Animation, Bournemouth University.
 Dissertation: *Emotion-Responsive Kinetic Typography: A Prosody-Driven
 Captioning Pipeline for Accessibility*
 Author: Moses Sirapandji, August 2026
-EOF
-
-git add README.md
-git status
