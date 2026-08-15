@@ -201,7 +201,7 @@ def _(os, torch):
     # run_evaluation_batch's skip_existing will not find the old pairs and
     # will re-render everything, which is correct: those files predate
     # merge_rapid_segments and are not the renders you want in a study.
-    VERSION_TAG = "V21(Post_EvaluationCode)"
+    VERSION_TAG = "V1.3(Post_Evaluation)"
 
     features_csv = "outputs/features.csv"     # 14-feature cache (fallback model)
 
