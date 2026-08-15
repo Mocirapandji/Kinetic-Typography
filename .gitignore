@@ -19,3 +19,4 @@ parselmouth
 .DS_Store
 __pycache__/
 *.pyc
+rendered_output/

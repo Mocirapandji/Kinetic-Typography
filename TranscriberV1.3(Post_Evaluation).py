@@ -201,7 +201,7 @@ def _(os, torch):
     # run_evaluation_batch's skip_existing will not find the old pairs and
     # will re-render everything, which is correct: those files predate
     # merge_rapid_segments and are not the renders you want in a study.
-    VERSION_TAG = "vtesting"
+    VERSION_TAG = "V21(Post_EvaluationCode)"
 
     features_csv = "outputs/features.csv"     # 14-feature cache (fallback model)
 
@@ -6661,7 +6661,7 @@ def _(Path, VERSION_TAG, json, os, re, subprocess):
     # cell meant editing PLAIN_SPEC re-read the lexicon, which is the sort
     # of tax that makes people stop editing dials.
     # =====================================================================
-    SOURCE_VIDEO_DIR = "OriginalVideo"
+    SOURCE_VIDEO_DIR = "source_clips_raw/"
     EVAL_OUT_DIR = "evaluationoutput"
     VIDEO_EXTS = {".mp4", ".mov", ".mkv", ".avi", ".m4v", ".webm"}
 
@@ -7326,7 +7326,7 @@ def _(
 
 @app.cell
 def _(run_evaluation_batch):
-    run_evaluation_batch(only=["RDR2(sad)"])
+    run_evaluation_batch()
     return
 
 
@@ -7342,7 +7342,7 @@ def _(mo):
     ### Running the batch
 
     ```python
-    run_evaluation_batch()                      # everything in OriginalVideo/
+    run_evaluation_batch()                      # everything in source_clips_raw/
     run_evaluation_batch(only=["BreakingBad_Happy"])        # one stimulus
     run_evaluation_batch(skip_existing=False)   # force re-render
     run_evaluation_batch(normalise=False)       # skip the format pass
@@ -7360,7 +7360,7 @@ def _(mo):
     intended: the v18 files predate `merge_rapid_segments` and contain the
     0.16-second captions.
 
-    Adding a stimulus is dropping a file into `OriginalVideo/` — the runner
+    Adding a stimulus is dropping a file into `source_clips_raw/` — the runner
     globs the folder, so nothing here is keyed to a filename.
     """)
     return
