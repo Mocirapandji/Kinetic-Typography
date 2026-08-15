@@ -1,0 +1,76 @@
+{
+  "part_a": {
+    "bundle": {
+      "path": "outputs/clf_v3.joblib",
+      "n_features": 88,
+      "extractor": "egemaps",
+      "classes": [
+        "angry",
+        "excited",
+        "fearful",
+        "frustrated",
+        "happy",
+        "neutral",
+        "sad",
+        "surprised"
+      ],
+      "n_classes": 8,
+      "chance": 0.125,
+      "cv_protocol": "leave-one-IEMOCAP-session-out; RAVDESS train-only",
+      "cv_accuracy": 0.3538,
+      "cv_macro_f1": 0.2569,
+      "ravdess_weight": 0.3,
+      "norm_scope": "dialog",
+      "corpus_verdict": "IEMOCAP-era label space (contains ['excited', 'frustrated'], which RAVDESS does not have)"
+    },
+    "combined_csv": {
+      "path": "outputs/features_combined_egemaps.csv",
+      "n_rows": 8583,
+      "by_source": {
+        "iemocap": 7527,
+        "ravdess": 1056
+      },
+      "sessions": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "class_counts_by_source": {
+        "angry": {
+          "iemocap": 1103,
+          "ravdess": 192
+        },
+        "excited": {
+          "iemocap": 1041,
+          "ravdess": 0
+        },
+        "fearful": {
+          "iemocap": 40,
+          "ravdess": 192
+        },
+        "frustrated": {
+          "iemocap": 1849,
+          "ravdess": 0
+        },
+        "happy": {
+          "iemocap": 595,
+          "ravdess": 192
+        },
+        "neutral": {
+          "iemocap": 1708,
+          "ravdess": 96
+        },
+        "sad": {
+          "iemocap": 1084,
+          "ravdess": 192
+        },
+        "surprised": {
+          "iemocap": 107,
+          "ravdess": 192
+        }
+      }
+    }
+  }
+}

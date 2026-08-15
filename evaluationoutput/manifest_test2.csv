@@ -1,0 +1,2 @@
+source,stem,status,normalised_src,unique,plain,n_segments,n_words,emotions
+TheMentalist(Threathen).mp4,TheMentalist_Threathen,ok,outputs/normalised/TheMentalist(Threathen)_norm.mp4,evaluationoutput/video/TheMentalist_Threathentest2_withUniqueSubtitles.mp4,evaluationoutput/video/TheMentalist_Threathentest2_withoutUniqueSubtitles.mp4,19,111,"sad:10, frustrated:5, neutral:2, excited:2"

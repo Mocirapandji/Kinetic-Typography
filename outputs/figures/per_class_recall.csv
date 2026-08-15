@@ -1,0 +1,9 @@
+class,support_base,recall_base,times_predicted_base,support_cmp,recall_cmp,times_predicted_cmp
+angry,1103,0.4316,1289,1103,0.4297,1253
+excited,1041,0.196,796,1041,0.1825,731
+fearful,40,0.0,2,40,0.1,39
+frustrated,1849,0.2866,1579,1849,0.2948,1622
+happy,595,0.0303,93,595,0.0353,79
+neutral,1708,0.5878,2712,1708,0.582,2676
+sad,1084,0.4428,997,1084,0.4373,990
+surprised,107,0.1495,59,107,0.1869,137

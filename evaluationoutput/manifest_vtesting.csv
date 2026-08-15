@@ -1,0 +1,2 @@
+source,stem,status,normalised_src,unique,plain,n_segments,n_words,n_lines,emotions
+RDR2(sad).mp4,RDR2_sad,ok,,evaluationoutput/video/RDR2_sadvtesting_withUniqueSubtitles.mp4,evaluationoutput/video/RDR2_sadvtesting_withoutUniqueSubtitles.mp4,68,332,58,frustrated:68

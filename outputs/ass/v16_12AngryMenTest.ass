@@ -1,0 +1,349 @@
+[Script Info]
+ScriptType: v4.00+
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Cap,Liberation Sans,48,&H00FFFFFF,&H000000FF,&H00000000,&H64000000,0,0,0,0,100,100,0,0,1,3,1,2,40,40,50,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.71,0:00:01.77,Cap,,0,0,0,,{\an1\pos(866.5,990)\fad(120,120)\fnLiberation Serif\fs40\c&HD1AA95&\b0\i0\fsp4.38\fscx100\fscy100\frz0\alpha&H96&\t(0,160,\alpha&H00&)}Not
+Dialogue: 0,0:00:00.71,0:00:01.77,Cap,,0,0,0,,{\an1\pos(942.8,990)\fad(120,120)\fnLiberation Serif\fs40\c&HD1AA97&\b0\i0\fsp2.82\fscx100\fscy100\frz0\alpha&H96&\t(200,460,\alpha&H00&)}guilty.
+Dialogue: 0,0:00:01.96,0:00:03.60,Cap,,0,0,0,,{\an1\pos(643.4,988.8)\fad(120,120)\fnDejaVu Sans\fs41\c&H7CEAFF&\b0\i0\fsp1.44\fscx100\fscy100\frz0\alpha&H96&\t(0,180,\alpha&H00&)}WHAT'S
+Dialogue: 0,0:00:01.96,0:00:03.60,Cap,,0,0,0,,{\an1\pos(799.2,988.8)\fad(120,120)\fnDejaVu Sans\fs41\c&H7CEAFF&\b0\i0\fsp1.56\fscx100\fscy100\frz0\alpha&H96&\t(200,340,\alpha&H00&)}THE
+Dialogue: 0,0:00:01.96,0:00:03.60,Cap,,0,0,0,,{\an1\pos(885.1,990)\fad(120,120)\org(968,980.4)\fnDejaVu Sans\fs47\c&H59E4FF&\b0\i0\fsp0.76\fscx100\fscy100\frz0\alpha&H96&\t(360,640,\alpha&H00&)\t(360,434,\fscy111\fscx96)\t(434,508,\fscy91\fscx104)\t(508,584,\fscy100\fscx100)}MATTER
+Dialogue: 0,0:00:01.96,0:00:03.60,Cap,,0,0,0,,{\an1\pos(1070.5,988.8)\fad(120,120)\fnDejaVu Sans\fs41\c&H7CEAFF&\b0\i0\fsp1.04\fscx100\fscy100\frz0\alpha&H96&\t(680,820,\alpha&H00&)}WITH
+Dialogue: 0,0:00:01.96,0:00:03.60,Cap,,0,0,0,,{\an1\pos(1178.9,988.8)\fad(120,120)\fnDejaVu Sans\fs41\c&H7CEAFF&\b0\i0\fsp2.67\fscx100\fscy100\frz0\alpha&H96&\t(840,1041,\alpha&H00&)}YOU!
+Dialogue: 0,0:00:04.02,0:00:05.92,Cap,,0,0,0,,{\an1\pos(592.7,988.1)\fad(120,120)\fnLiberation Mono\fs40\c&H94A287&\b0\i1\fsp3.3\fscx100\fscy100\frz0\alpha&H96&\t(0,120,\alpha&H00&)}I
+Dialogue: 0,0:00:04.02,0:00:05.92,Cap,,0,0,0,,{\an1\pos(638.2,988.1)\fad(120,120)\fnLiberation Mono\fs40\c&H94A287&\b0\i1\fsp1.25\fscx100\fscy100\frz0\alpha&H96&\t(100,220,\alpha&H00&)}have
+Dialogue: 0,0:00:04.02,0:00:05.92,Cap,,0,0,0,,{\an1\pos(748.7,988.1)\fad(120,120)\fnLiberation Mono\fs40\c&H94A287&\b0\i1\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(260,380,\alpha&H00&)}a
+Dialogue: 0,0:00:04.02,0:00:05.92,Cap,,0,0,0,,{\an1\pos(790.9,988.4)\fad(120,120)\fnLiberation Mono\fs41\c&H94A286&\b0\i1\fsp2.67\fscx100\fscy100\frz0\alpha&H96&\t(340,761,\alpha&H00&)}reasonable
+Dialogue: 0,0:00:04.02,0:00:05.92,Cap,,0,0,0,,{\an1\pos(1055.5,990)\fad(120,120)\org(1123.4,977.4)\fnLiberation Mono\fs47\c&H8FA27E&\b0\i1\fsp2.34\fscx100\fscy100\frz0\alpha&H96&\t(801,1061,\alpha&H00&)\t(801,917,\fscy82\fscx109)\t(917,1060,\fscy100\fscx100)}doubt
+Dialogue: 0,0:00:04.02,0:00:05.92,Cap,,0,0,0,,{\an1\pos(1228.7,988.1)\fad(120,120)\fnLiberation Mono\fs40\c&H94A287&\b0\i1\fsp3.56\fscx100\fscy100\frz0\alpha&H96&\t(1141,1361,\alpha&H00&)}now.
+Dialogue: 0,0:00:05.92,0:00:07.28,Cap,,0,0,0,,{\an1\pos(816.2,990)\fad(120,120)\fnDejaVu Sans\fs41\c&HE9CA8A&\b0\i0\fsp2.7\fscx100\fscy100\frz0\alpha&H96&\t(0,321,\alpha&H00&)}Eleven
+Dialogue: 0,0:00:05.92,0:00:07.28,Cap,,0,0,0,,{\an1\pos(961.8,990)\fad(120,120)\fnDejaVu Sans\fs41\c&HE9CA8A&\b0\i0\fsp3.61\fscx100\fscy100\frz0\alpha&H96&\t(361,481,\alpha&H00&)}to
+Dialogue: 0,0:00:05.92,0:00:07.28,Cap,,0,0,0,,{\an1\pos(1015.5,990)\fad(120,120)\fnDejaVu Sans\fs41\c&HE9C988&\b0\i0\fsp2.94\fscx100\fscy100\frz0\alpha&H96&\t(581,761,\alpha&H00&)}one.
+Dialogue: 0,0:00:07.52,0:00:09.04,Cap,,0,0,0,,{\an1\pos(516.2,988.4)\fad(120,120)\fnDejaVu Sans\fs41\c&H7AEAFF&\b0\i0\fsp2.2\fscx100\fscy100\frz0\alpha&H96&\t(0,120,\alpha&H00&)}BUT
+Dialogue: 0,0:00:07.52,0:00:09.04,Cap,,0,0,0,,{\an1\pos(605.3,988.4)\fad(120,120)\fnDejaVu Sans\fs41\c&H7AEAFF&\b0\i0\fsp1.62\fscx100\fscy100\frz0\alpha&H96&\t(120,260,\alpha&H00&)}WHAT
+Dialogue: 0,0:00:07.52,0:00:09.04,Cap,,0,0,0,,{\an1\pos(726.9,988.4)\fad(120,120)\fnDejaVu Sans\fs41\c&H7AEAFF&\b0\i0\fsp0.74\fscx100\fscy100\frz0\alpha&H96&\t(300,460,\alpha&H00&)}ABOUT
+Dialogue: 0,0:00:07.52,0:00:09.04,Cap,,0,0,0,,{\an1\pos(864.2,988.4)\fad(120,120)\fnDejaVu Sans\fs41\c&H7AEAFF&\b0\i0\fsp0.01\fscx100\fscy100\frz0\alpha&H96&\t(500,680,\alpha&H00&)}ALL
+Dialogue: 0,0:00:07.52,0:00:09.04,Cap,,0,0,0,,{\an1\pos(938.6,988.4)\fad(120,120)\fnDejaVu Sans\fs41\c&H7AEAFF&\b0\i0\fsp2.01\fscx100\fscy100\frz0\alpha&H96&\t(700,820,\alpha&H00&)}THE
+Dialogue: 0,0:00:07.52,0:00:09.04,Cap,,0,0,0,,{\an1\pos(1025.9,990)\fad(120,120)\org(1100.2,980)\fnDejaVu Sans\fs49\c&H4DE2FF&\b0\i0\fsp0.53\fscx100\fscy100\frz0\alpha&H96&\t(900,1120,\alpha&H00&)\t(900,958,\fscy110\fscx96)\t(958,1016,\fscy92\fscx104)\t(1016,1075,\fscy100\fscx100)}OTHER
+Dialogue: 0,0:00:07.52,0:00:09.04,Cap,,0,0,0,,{\an1\pos(1193.8,988.4)\fad(120,120)\fnDejaVu Sans\fs41\c&H7AEAFF&\b0\i0\fsp1.89\fscx100\fscy100\frz0\alpha&H96&\t(1160,1501,\alpha&H00&)}EVIDENCE!
+Dialogue: 0,0:00:09.04,0:00:12.70,Cap,,0,0,0,,{\an1\pos(399.9,988.4)\fad(120,120)\fnDejaVu Sans\fs41\c&HFFE97A&\b0\i0\fsp0.86\fscx100\fscy100\frz0\alpha&H96&\t(0,120,\alpha&H00&)}What
+Dialogue: 0,0:00:09.04,0:00:12.70,Cap,,0,0,0,,{\an1\pos(506.9,988.4)\fad(120,120)\fnDejaVu Sans\fs41\c&HFFE97A&\b0\i0\fsp0.98\fscx100\fscy100\frz0\alpha&H96&\t(160,340,\alpha&H00&)}about
+Dialogue: 0,0:00:09.04,0:00:12.70,Cap,,0,0,0,,{\an1\pos(631.3,988.4)\fad(120,120)\fnDejaVu Sans\fs41\c&HFFE979&\b0\i0\fsp0.33\fscx100\fscy100\frz0\alpha&H96&\t(880,1000,\alpha&H00&)}all
+Dialogue: 0,0:00:09.04,0:00:12.70,Cap,,0,0,0,,{\an1\pos(684.6,988.4)\fad(120,120)\fnDejaVu Sans\fs41\c&HFFE97A&\b0\i0\fsp2.28\fscx100\fscy100\frz0\alpha&H96&\t(1000,1180,\alpha&H00&)}that
+Dialogue: 0,0:00:09.04,0:00:12.70,Cap,,0,0,0,,{\an1\pos(776.2,988.6)\fad(120,120)\fnDejaVu Sans\fs42\c&HFFE877&\b0\i0\fsp3.76\fscx100\fscy100\frz0\alpha&H96&\t(1200,1521,\alpha&H00&)}stuff,
+Dialogue: 0,0:00:09.04,0:00:12.70,Cap,,0,0,0,,{\an1\pos(905.2,988.4)\fad(120,120)\fnDejaVu Sans\fs41\c&HFFE97A&\b0\i0\fsp2.4\fscx100\fscy100\frz0\alpha&H96&\t(1981,2121,\alpha&H00&)}the
+Dialogue: 0,0:00:09.04,0:00:12.70,Cap,,0,0,0,,{\an1\pos(981.2,988.8)\fad(120,120)\fnDejaVu Sans\fs43\c&HFFE76E&\b0\i0\fsp2.13\fscx100\fscy100\frz0\alpha&H96&\t(2161,2461,\alpha&H00&)}knife,
+Dialogue: 0,0:00:09.04,0:00:12.70,Cap,,0,0,0,,{\an1\pos(1108,988.4)\fad(120,120)\fnDejaVu Sans\fs41\c&HFFE97A&\b0\i0\fsp3.17\fscx100\fscy100\frz0\alpha&H96&\t(2501,2641,\alpha&H00&)}the
+Dialogue: 0,0:00:09.04,0:00:12.70,Cap,,0,0,0,,{\an1\pos(1186.4,990)\fad(120,120)\org(1248.5,980)\fnDejaVu Sans\fs49\c&HFFE14C&\b0\i0\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(2882,3122,\alpha&H00&)\t(2882,2968,\fscy116\fscx94)\t(2968,3074,\fscy100\fscx100)}whole
+Dialogue: 0,0:00:09.04,0:00:12.70,Cap,,0,0,0,,{\an1\pos(1323.9,988.6)\fad(120,120)\fnDejaVu Sans\fs42\c&HFFE874&\b0\i0\fsp2.24\fscx100\fscy100\frz0\alpha&H96&\t(3162,3642,\alpha&H00&)}business?
+Dialogue: 0,0:00:12.70,0:00:16.05,Cap,,0,0,0,,{\an1\pos(283.3,988.4)\fad(120,120)\fnLiberation Serif\fs41\c&H93ABA8&\b0\i0\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(0,120,\alpha&H00&)}WELL,
+Dialogue: 0,0:00:12.70,0:00:16.05,Cap,,0,0,0,,{\an1\pos(404.5,988.4)\fad(120,120)\fnLiberation Serif\fs41\c&H93ABA8&\b0\i0\fsp2.89\fscx100\fscy100\frz0\alpha&H96&\t(120,240,\alpha&H00&)}YOU
+Dialogue: 0,0:00:12.70,0:00:16.05,Cap,,0,0,0,,{\an1\pos(502.6,988.4)\fad(120,120)\fnLiberation Serif\fs41\c&H93ABA8&\b0\i0\fsp2.55\fscx100\fscy100\frz0\alpha&H96&\t(280,440,\alpha&H00&)}SAID
+Dialogue: 0,0:00:12.70,0:00:16.05,Cap,,0,0,0,,{\an1\pos(608.3,988.4)\fad(120,120)\fnLiberation Serif\fs41\c&H93ABA8&\b0\i0\fsp2.73\fscx100\fscy100\frz0\alpha&H96&\t(460,580,\alpha&H00&)}WE
+Dialogue: 0,0:00:12.70,0:00:16.05,Cap,,0,0,0,,{\an1\pos(680.6,988.4)\fad(120,120)\fnLiberation Serif\fs41\c&H93ABA8&\b0\i0\fsp0.96\fscx100\fscy100\frz0\alpha&H96&\t(560,700,\alpha&H00&)}COULD
+Dialogue: 0,0:00:12.70,0:00:16.05,Cap,,0,0,0,,{\an1\pos(822,990)\fad(120,120)\fnLiberation Serif\fs49\c&H89ABA7&\b0\i0\fsp2.82\fscx100\fscy100\frz0\alpha&H96&\t(741,1021,\alpha&H00&)}THROW
+Dialogue: 0,0:00:12.70,0:00:16.05,Cap,,0,0,0,,{\an1\pos(1009.3,988.4)\fad(120,120)\fnLiberation Serif\fs41\c&H93ABA8&\b0\i0\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(1041,1161,\alpha&H00&)}OUT
+Dialogue: 0,0:00:12.70,0:00:16.05,Cap,,0,0,0,,{\an1\pos(1094.5,988.4)\fad(120,120)\fnLiberation Serif\fs41\c&H93ABA8&\b0\i0\fsp2.87\fscx100\fscy100\frz0\alpha&H96&\t(1121,1261,\alpha&H00&)}ALL
+Dialogue: 0,0:00:12.70,0:00:16.05,Cap,,0,0,0,,{\an1\pos(1184.3,988.4)\fad(120,120)\fnLiberation Serif\fs41\c&H93ABA8&\b0\i0\fsp0.69\fscx100\fscy100\frz0\alpha&H96&\t(1301,1421,\alpha&H00&)}THE
+Dialogue: 0,0:00:12.70,0:00:16.05,Cap,,0,0,0,,{\an1\pos(1267.5,988.4)\fad(120,120)\fnLiberation Serif\fs41\c&H93ABA8&\b0\i0\fsp2.15\fscx100\fscy100\frz0\alpha&H96&\t(1421,1601,\alpha&H00&)}OTHER
+Dialogue: 0,0:00:12.70,0:00:16.05,Cap,,0,0,0,,{\an1\pos(1410.8,988.4)\fad(120,120)\fnLiberation Serif\fs41\c&H93ABA8&\b0\i0\fsp3.18\fscx100\fscy100\frz0\alpha&H96&\t(1661,2021,\alpha&H00&)}EVIDENCE!
+Dialogue: 0,0:00:21.47,0:00:23.67,Cap,,0,0,0,,{\an1\pos(620.5,990)\fad(120,120)\org(690.4,977.2)\fnLiberation Mono\fs48\c&H5CC7BD&\b0\i1\fsp2.62\fscx100\fscy100\frz0\alpha&H96&\t(0,260,\alpha&H00&)\t(0,117,\fscy130\fscx89)\t(117,260,\fscy100\fscx100)}WELL,
+Dialogue: 0,0:00:21.47,0:00:23.67,Cap,,0,0,0,,{\an1\pos(793.6,988.1)\fad(120,120)\fnLiberation Mono\fs41\c&H78C7BF&\b0\i1\fsp0.21\fscx100\fscy100\frz0\alpha&H96&\t(820,940,\alpha&H00&)}WHAT
+Dialogue: 0,0:00:21.47,0:00:23.67,Cap,,0,0,0,,{\an1\pos(902.6,988.1)\fad(120,120)\fnLiberation Mono\fs41\c&H78C7BF&\b0\i1\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(940,1060,\alpha&H00&)}ARE
+Dialogue: 0,0:00:21.47,0:00:23.67,Cap,,0,0,0,,{\an1\pos(989.1,988.1)\fad(120,120)\fnLiberation Mono\fs41\c&H78C7BF&\b0\i1\fsp2.25\fscx100\fscy100\frz0\alpha&H96&\t(1021,1141,\alpha&H00&)}WE
+Dialogue: 0,0:00:21.47,0:00:23.67,Cap,,0,0,0,,{\an1\pos(1058.5,988.1)\fad(120,120)\fnLiberation Mono\fs41\c&H78C7BF&\b0\i1\fsp1.02\fscx100\fscy100\frz0\alpha&H96&\t(1161,1321,\alpha&H00&)}DOING
+Dialogue: 0,0:00:21.47,0:00:23.67,Cap,,0,0,0,,{\an1\pos(1193.4,989.2)\fad(120,120)\fnLiberation Mono\fs45\c&H66C7BE&\b0\i1\fsp2.78\fscx100\fscy100\frz0\alpha&H96&\t(1361,1601,\alpha&H00&)}NOW!
+Dialogue: 0,0:00:26.75,0:00:27.93,Cap,,0,0,0,,{\an1\pos(839,990)\fad(120,120)\fnLiberation Sans\fs40\c&HE3CFC6&\b0\i0\fsp2.4\fscx100\fscy100\frz0\alpha&H96&\t(0,221,\alpha&H00&)}You're
+Dialogue: 0,0:00:26.75,0:00:27.93,Cap,,0,0,0,,{\an1\pos(962.1,990)\fad(120,120)\fnLiberation Sans\fs40\c&HE3CFC6&\b0\i0\fsp3.61\fscx100\fscy100\frz0\alpha&H96&\t(241,581,\alpha&H00&)}alone.
+Dialogue: 0,0:00:28.89,0:00:31.10,Cap,,0,0,0,,{\an1\pos(524,989.2)\fad(120,120)\fnDejaVu Sans\fs43\c&H6CE8FF&\b0\i0\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(0,120,\alpha&H00&)}I
+Dialogue: 0,0:00:28.89,0:00:31.10,Cap,,0,0,0,,{\an1\pos(546.6,990)\fad(120,120)\org(612,980.4)\fnDejaVu Sans\fs47\c&H56E4FF&\b0\i0\fsp0.46\fscx100\fscy100\frz0\alpha&H96&\t(100,300,\alpha&H00&)\t(100,172,\fscy82\fscx109)\t(172,260,\fscy100\fscx100)}DON'T
+Dialogue: 0,0:00:28.89,0:00:31.10,Cap,,0,0,0,,{\an1\pos(702.4,989.6)\fad(120,120)\fnDejaVu Sans\fs45\c&H5FE5FF&\b0\i0\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(360,580,\alpha&H00&)}CARE
+Dialogue: 0,0:00:28.89,0:00:31.10,Cap,,0,0,0,,{\an1\pos(819.2,989)\fad(120,120)\fnDejaVu Sans\fs42\c&H76E9FF&\b0\i0\fsp0.53\fscx100\fscy100\frz0\alpha&H96&\t(600,820,\alpha&H00&)}WHETHER
+Dialogue: 0,0:00:28.89,0:00:31.10,Cap,,0,0,0,,{\an1\pos(1016.6,989)\fad(120,120)\fnDejaVu Sans\fs42\c&H76E9FF&\b0\i0\fsp0.32\fscx100\fscy100\frz0\alpha&H96&\t(880,1000,\alpha&H00&)}I'M
+Dialogue: 0,0:00:28.89,0:00:31.10,Cap,,0,0,0,,{\an1\pos(1080.6,989)\fad(120,120)\fnDejaVu Sans\fs42\c&H76E9FF&\b0\i0\fsp0.87\fscx100\fscy100\frz0\alpha&H96&\t(1021,1261,\alpha&H00&)}ALONE
+Dialogue: 0,0:00:28.89,0:00:31.10,Cap,,0,0,0,,{\an1\pos(1217.8,989)\fad(120,120)\fnDejaVu Sans\fs42\c&H76E9FF&\b0\i0\fsp0.99\fscx100\fscy100\frz0\alpha&H96&\t(1321,1441,\alpha&H00&)}OR
+Dialogue: 0,0:00:28.89,0:00:31.10,Cap,,0,0,0,,{\an1\pos(1284.6,989)\fad(120,120)\fnDejaVu Sans\fs42\c&H76E9FF&\b0\i0\fsp1.07\fscx100\fscy100\frz0\alpha&H96&\t(1401,1601,\alpha&H00&)}NOT!!
+Dialogue: 0,0:00:31.10,0:00:32.40,Cap,,0,0,0,,{\an1\pos(805.3,990)\fad(120,120)\fnDejaVu Serif\fs41\c&H8C8C9E&\b0\i0\fsp2.85\fscx100\fscy100\frz0\alpha&H96&\t(0,160,\alpha&H00&)}IT'S
+Dialogue: 0,0:00:31.10,0:00:32.40,Cap,,0,0,0,,{\an1\pos(898.9,990)\fad(120,120)\fnDejaVu Serif\fs41\c&H8C8C9E&\b0\i0\fsp0.55\fscx100\fscy100\frz0\alpha&H96&\t(180,380,\alpha&H00&)}MY
+Dialogue: 0,0:00:31.10,0:00:32.40,Cap,,0,0,0,,{\an1\pos(970.4,990)\fad(120,120)\fnDejaVu Serif\fs41\c&H8B8C9E&\b0\i0\fsp1.29\fscx100\fscy100\frz0\alpha&H96&\t(420,700,\alpha&H00&)}RIGHT!
+Dialogue: 0,0:00:35.48,0:00:36.66,Cap,,0,0,0,,{\an1\pos(842.3,990)\fad(120,120)\fnLiberation Serif\fs40\c&HE0CBC0&\b0\i0\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(0,120,\alpha&H00&)}It's
+Dialogue: 0,0:00:35.48,0:00:36.66,Cap,,0,0,0,,{\an1\pos(893.9,990)\fad(120,120)\fnLiberation Serif\fs40\c&HE0CABF&\b0\i0\fsp4.1\fscx100\fscy100\frz0\alpha&H96&\t(100,340,\alpha&H00&)}your
+Dialogue: 0,0:00:35.48,0:00:36.66,Cap,,0,0,0,,{\an1\pos(985.5,990)\fad(120,120)\fnLiberation Serif\fs40\c&HE0CBC0&\b0\i0\fsp2.51\fscx100\fscy100\frz0\alpha&H96&\t(360,580,\alpha&H00&)}right.
+Dialogue: 0,0:00:46.65,0:00:47.39,Cap,,0,0,0,,{\an1\pos(691.5,988.1)\fad(120,120)\fnLiberation Mono\fs41\c&HB5C884&\b0\i1\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(0,120,\alpha&H00&)}Well,
+Dialogue: 0,0:00:46.65,0:00:47.39,Cap,,0,0,0,,{\an1\pos(821.3,988.1)\fad(120,120)\fnLiberation Mono\fs41\c&HB5C884&\b0\i1\fsp0.19\fscx100\fscy100\frz0\alpha&H96&\t(140,260,\alpha&H00&)}what
+Dialogue: 0,0:00:46.65,0:00:47.39,Cap,,0,0,0,,{\an1\pos(930.2,988.1)\fad(120,120)\fnLiberation Mono\fs41\c&HB5C884&\b0\i1\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(260,380,\alpha&H00&)}do
+Dialogue: 0,0:00:46.65,0:00:47.39,Cap,,0,0,0,,{\an1\pos(995.1,988.1)\fad(120,120)\fnLiberation Mono\fs41\c&HB5C884&\b0\i1\fsp1.34\fscx100\fscy100\frz0\alpha&H96&\t(320,440,\alpha&H00&)}you
+Dialogue: 0,0:00:46.65,0:00:47.39,Cap,,0,0,0,,{\an1\pos(1085.6,990)\fad(120,120)\org(1151,977.2)\fnLiberation Mono\fs48\c&HAEC86B&\b0\i1\fsp0.82\fscx100\fscy100\frz0\alpha&H96&\t(460,700,\alpha&H00&)\t(460,568,\fscy82\fscx109)\t(568,700,\fscy100\fscx100)}want?
+Dialogue: 0,0:00:47.39,0:00:48.15,Cap,,0,0,0,,{\an1\pos(802.4,989.8)\fad(120,120)\fnDejaVu Sans\fs41\c&HBCCA83&\b0\i0\fsp3.94\fscx100\fscy100\frz0\alpha&H96&\t(0,120,\alpha&H00&)}I
+Dialogue: 0,0:00:47.39,0:00:48.15,Cap,,0,0,0,,{\an1\pos(827.9,990)\fad(120,120)\fnDejaVu Sans\fs42\c&HBBCA7C&\b0\i0\fsp3.33\fscx100\fscy100\frz0\alpha&H96&\t(140,320,\alpha&H00&)}say
+Dialogue: 0,0:00:47.39,0:00:48.15,Cap,,0,0,0,,{\an1\pos(911.5,989.8)\fad(120,120)\fnDejaVu Sans\fs41\c&HBCCA83&\b0\i0\fsp1.2\fscx100\fscy100\frz0\alpha&H96&\t(340,460,\alpha&H00&)}he's
+Dialogue: 0,0:00:47.39,0:00:48.15,Cap,,0,0,0,,{\an1\pos(999.3,989.8)\fad(120,120)\fnDejaVu Sans\fs41\c&HBBCA7E&\b0\i0\fsp1.92\fscx100\fscy100\frz0\alpha&H96&\t(500,740,\alpha&H00&)}guilty.
+Dialogue: 0,0:00:48.15,0:00:52.49,Cap,,0,0,0,,{\an1\pos(675.6,988.2)\fad(120,120)\fnLiberation Serif\fs40\c&H9B9B83&\b0\i0\fsp6\fscx100\fscy100\frz0\alpha&H96&\t(0,120,\alpha&H00&)}I
+Dialogue: 0,0:00:48.15,0:00:52.49,Cap,,0,0,0,,{\an1\pos(742.7,988.2)\fad(120,120)\fnLiberation Serif\fs40\c&H9B9B83&\b0\i0\fsp2.95\fscx100\fscy100\frz0\alpha&H96&\t(2681,2841,\alpha&H00&)}want
+Dialogue: 0,0:00:48.15,0:00:52.49,Cap,,0,0,0,,{\an1\pos(833.6,988.2)\fad(120,120)\fnLiberation Serif\fs40\c&H9B9B83&\b0\i0\fsp1.51\fscx100\fscy100\frz0\alpha&H96&\t(2861,2981,\alpha&H00&)}to
+Dialogue: 0,0:00:48.15,0:00:52.49,Cap,,0,0,0,,{\an1\pos(873.8,990)\fad(120,120)\org(918.1,980.4)\fnLiberation Serif\fs49\c&H9B9B77&\b0\i0\fsp3.14\fscx100\fscy100\frz0\alpha&H96&\t(2941,3121,\alpha&H00&)\t(2941,3076,\fscy91\fscx104)\t(3076,3241,\fscy100\fscx100)}hear
+Dialogue: 0,0:00:48.15,0:00:52.49,Cap,,0,0,0,,{\an1\pos(977.1,988.2)\fad(120,120)\fnLiberation Serif\fs40\c&H9B9B83&\b0\i0\fsp2.25\fscx100\fscy100\frz0\alpha&H96&\t(3161,3321,\alpha&H00&)}your
+Dialogue: 0,0:00:48.15,0:00:52.49,Cap,,0,0,0,,{\an1\pos(1061.3,988.2)\fad(120,120)\fnLiberation Serif\fs40\c&H9B9B83&\b0\i0\fsp2.44\fscx100\fscy100\frz0\alpha&H96&\t(3381,3741,\alpha&H00&)}arguments.
+Dialogue: 0,0:00:52.73,0:00:54.61,Cap,,0,0,0,,{\an1\pos(690.3,988.6)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&H6B6BCC&\b0\i0\fsp4.26\fscx100\fscy100\frz0\alpha&H96&\t(0,120,\alpha&H00&)}I
+Dialogue: 0,0:00:52.73,0:00:54.61,Cap,,0,0,0,,{\an1\pos(713.9,990)\fad(120,120)\org(767.6,980.2)\fnDejaVu Sans Condensed\fs48\c&H4949CC&\b0\i0\fsp1.83\fscx100\fscy100\frz0\alpha&H96&\t(120,380,\alpha&H00&)\t(120,213,\fscy82\fscx109)\t(213,327,\fscy100\fscx100)}GAVE
+Dialogue: 0,0:00:52.73,0:00:54.61,Cap,,0,0,0,,{\an1\pos(843.1,988.6)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&H6B6BCC&\b0\i0\fsp2.09\fscx100\fscy100\frz0\alpha&H96&\t(400,540,\alpha&H00&)}YOU
+Dialogue: 0,0:00:52.73,0:00:54.61,Cap,,0,0,0,,{\an1\pos(924.8,988.6)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&H6B6BCC&\b0\i0\fsp1.61\fscx100\fscy100\frz0\alpha&H96&\t(581,741,\alpha&H00&)}MY
+Dialogue: 0,0:00:52.73,0:00:54.61,Cap,,0,0,0,,{\an1\pos(984.7,988.6)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&H6B6BCC&\b0\i0\fsp3.08\fscx100\fscy100\frz0\alpha&H96&\t(821,1281,\alpha&H00&)}ARGUMENTS!
+Dialogue: 0,0:00:55.33,0:00:56.83,Cap,,0,0,0,,{\an1\pos(764.5,989.8)\fad(120,120)\fnLiberation Sans\fs40\c&HE2CFC5&\b0\i0\fsp1.66\fscx100\fscy100\frz0\alpha&H96&\t(0,160,\alpha&H00&)}We're
+Dialogue: 0,0:00:55.33,0:00:56.83,Cap,,0,0,0,,{\an1\pos(874.1,989.8)\fad(120,120)\fnLiberation Sans\fs40\c&HE2CFC4&\b0\i0\fsp2.3\fscx100\fscy100\frz0\alpha&H96&\t(180,300,\alpha&H00&)}not
+Dialogue: 0,0:00:55.33,0:00:56.83,Cap,,0,0,0,,{\an1\pos(940.5,990)\fad(120,120)\fnLiberation Sans\fs41\c&HE2CEC4&\b0\i0\fsp4.01\fscx100\fscy100\frz0\alpha&H96&\t(360,900,\alpha&H00&)}convinced.
+Dialogue: 0,0:00:57.27,0:00:58.89,Cap,,0,0,0,,{\an1\pos(640.2,988.7)\fad(120,120)\fnLiberation Mono\fs40\c&H96A187&\b0\i1\fsp4.78\fscx100\fscy100\frz0\alpha&H96&\t(0,120,\alpha&H00&)}We
+Dialogue: 0,0:00:57.27,0:00:58.89,Cap,,0,0,0,,{\an1\pos(713.1,988.9)\fad(120,120)\fnLiberation Mono\fs41\c&H95A184&\b0\i1\fsp2.47\fscx100\fscy100\frz0\alpha&H96&\t(140,300,\alpha&H00&)}want
+Dialogue: 0,0:00:57.27,0:00:58.89,Cap,,0,0,0,,{\an1\pos(831.1,988.7)\fad(120,120)\fnLiberation Mono\fs40\c&H96A187&\b0\i1\fsp2.1\fscx100\fscy100\frz0\alpha&H96&\t(320,440,\alpha&H00&)}to
+Dialogue: 0,0:00:57.27,0:00:58.89,Cap,,0,0,0,,{\an1\pos(898.6,990)\fad(120,120)\fnLiberation Mono\fs45\c&H92A17F&\b0\i1\fsp2\fscx100\fscy100\frz0\alpha&H96&\t(420,580,\alpha&H00&)}hear
+Dialogue: 0,0:00:57.27,0:00:58.89,Cap,,0,0,0,,{\an1\pos(1025.3,988.7)\fad(120,120)\fnLiberation Mono\fs40\c&H96A187&\b0\i1\fsp1.28\fscx100\fscy100\frz0\alpha&H96&\t(620,740,\alpha&H00&)}them
+Dialogue: 0,0:00:57.27,0:00:58.89,Cap,,0,0,0,,{\an1\pos(1136,988.7)\fad(120,120)\fnLiberation Mono\fs40\c&H96A187&\b0\i1\fsp2.87\fscx100\fscy100\frz0\alpha&H96&\t(780,1020,\alpha&H00&)}again.
+Dialogue: 0,0:01:00.15,0:01:02.19,Cap,,0,0,0,,{\an1\pos(564.4,987.9)\fad(120,120)\fnLiberation Mono\fs40\c&H96A087&\b0\i1\fsp4.46\fscx100\fscy100\frz0\alpha&H96&\t(0,120,\alpha&H00&)}We
+Dialogue: 0,0:01:00.15,0:01:02.19,Cap,,0,0,0,,{\an1\pos(636.6,987.9)\fad(120,120)\fnLiberation Mono\fs40\c&H96A087&\b0\i1\fsp1.24\fscx100\fscy100\frz0\alpha&H96&\t(140,260,\alpha&H00&)}have
+Dialogue: 0,0:01:00.15,0:01:02.19,Cap,,0,0,0,,{\an1\pos(747.1,987.9)\fad(120,120)\fnLiberation Mono\fs40\c&H96A087&\b0\i1\fsp1.58\fscx100\fscy100\frz0\alpha&H96&\t(300,420,\alpha&H00&)}as
+Dialogue: 0,0:01:00.15,0:01:02.19,Cap,,0,0,0,,{\an1\pos(813.6,987.9)\fad(120,120)\fnLiberation Mono\fs40\c&H96A087&\b0\i1\fsp2.79\fscx100\fscy100\frz0\alpha&H96&\t(400,580,\alpha&H00&)}much
+Dialogue: 0,0:01:00.15,0:01:02.19,Cap,,0,0,0,,{\an1\pos(930.3,987.9)\fad(120,120)\fnLiberation Mono\fs40\c&H96A087&\b0\i1\fsp3.36\fscx100\fscy100\frz0\alpha&H96&\t(640,861,\alpha&H00&)}time
+Dialogue: 0,0:01:00.15,0:01:02.19,Cap,,0,0,0,,{\an1\pos(1049.2,987.9)\fad(120,120)\fnLiberation Mono\fs40\c&H96A087&\b0\i1\fsp1.39\fscx100\fscy100\frz0\alpha&H96&\t(901,1021,\alpha&H00&)}as
+Dialogue: 0,0:01:00.15,0:01:02.19,Cap,,0,0,0,,{\an1\pos(1115.3,987.9)\fad(120,120)\fnLiberation Mono\fs40\c&H96A087&\b0\i1\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(1041,1161,\alpha&H00&)}it
+Dialogue: 0,0:01:00.15,0:01:02.19,Cap,,0,0,0,,{\an1\pos(1178.6,990)\fad(120,120)\fnLiberation Mono\fs48\c&H92A07B&\b0\i1\fsp4.17\fscx100\fscy100\frz0\alpha&H96&\t(1121,1441,\alpha&H00&)}takes.
+Dialogue: 0,0:01:07.94,0:01:14.40,Cap,,0,0,0,,{\an1\pos(182.2,939)\fad(120,120)\fnDejaVu Sans\fs40\c&HFFEA83&\b0\i0\fsp4\fscx100\fscy100\frz0\alpha&H96&\t(0,581,\alpha&H00&)}Everything,
+Dialogue: 0,0:01:07.94,0:01:14.40,Cap,,0,0,0,,{\an1\pos(455.6,939)\fad(120,120)\fnDejaVu Sans\fs40\c&HFFEA83&\b0\i0\fsp4.59\fscx100\fscy100\frz0\alpha&H96&\t(1421,1902,\alpha&H00&)}every
+Dialogue: 0,0:01:07.94,0:01:14.40,Cap,,0,0,0,,{\an1\pos(586.4,941.2)\fad(120,120)\org(659.6,930.8)\fnDejaVu Sans\fs51\c&HFFE047&\b0\i0\fsp2.85\fscx100\fscy100\frz0\alpha&H96&\t(2122,2762,\alpha&H00&)\t(2122,2352,\fscy93\fscx103)\t(2352,2634,\fscy100\fscx100)}single
+Dialogue: 0,0:01:07.94,0:01:14.40,Cap,,0,0,0,,{\an1\pos(751.6,940.4)\fad(120,120)\fnDejaVu Sans\fs47\c&HFFE359&\b0\i0\fsp3.01\fscx100\fscy100\frz0\alpha&H96&\t(2902,3183,\alpha&H00&)}thing
+Dialogue: 0,0:01:07.94,0:01:14.40,Cap,,0,0,0,,{\an1\pos(883.1,939)\fad(120,120)\fnDejaVu Sans\fs40\c&HFFEA83&\b0\i0\fsp2.06\fscx100\fscy100\frz0\alpha&H96&\t(3203,3343,\alpha&H00&)}that
+Dialogue: 0,0:01:07.94,0:01:14.40,Cap,,0,0,0,,{\an1\pos(971.8,939)\fad(120,120)\fnDejaVu Sans\fs40\c&HFFEA83&\b0\i0\fsp3.22\fscx100\fscy100\frz0\alpha&H96&\t(3383,3583,\alpha&H00&)}took
+Dialogue: 0,0:01:07.94,0:01:14.40,Cap,,0,0,0,,{\an1\pos(1070.9,939)\fad(120,120)\fnDejaVu Sans\fs40\c&HFFEA83&\b0\i0\fsp3.24\fscx100\fscy100\frz0\alpha&H96&\t(3643,3903,\alpha&H00&)}place
+Dialogue: 0,0:01:07.94,0:01:14.40,Cap,,0,0,0,,{\an1\pos(1190.2,939)\fad(120,120)\fnDejaVu Sans\fs40\c&HFFEA83&\b0\i0\fsp1.16\fscx100\fscy100\frz0\alpha&H96&\t(3963,4083,\alpha&H00&)}in
+Dialogue: 0,0:01:07.94,0:01:14.40,Cap,,0,0,0,,{\an1\pos(1234.7,939)\fad(120,120)\fnDejaVu Sans\fs40\c&HFFEA83&\b0\i0\fsp1.97\fscx100\fscy100\frz0\alpha&H96&\t(4063,4203,\alpha&H00&)}that
+Dialogue: 0,0:01:07.94,0:01:14.40,Cap,,0,0,0,,{\an1\pos(1323.1,939)\fad(120,120)\fnDejaVu Sans\fs40\c&HFFEA83&\b0\i0\fsp1.2\fscx100\fscy100\frz0\alpha&H96&\t(4283,4584,\alpha&H00&)}courtroom,
+Dialogue: 0,0:01:07.94,0:01:14.40,Cap,,0,0,0,,{\an1\pos(1534.7,939)\fad(120,120)\fnDejaVu Sans\fs40\c&HFFEA83&\b0\i0\fsp2.18\fscx100\fscy100\frz0\alpha&H96&\t(4604,4724,\alpha&H00&)}but
+Dialogue: 0,0:01:07.94,0:01:14.40,Cap,,0,0,0,,{\an1\pos(1609.1,939)\fad(120,120)\fnDejaVu Sans\fs40\c&HFFEA83&\b0\i0\fsp2.18\fscx100\fscy100\frz0\alpha&H96&\t(4764,4884,\alpha&H00&)}I
+Dialogue: 0,0:01:07.94,0:01:14.40,Cap,,0,0,0,,{\an1\pos(1632.3,939)\fad(120,120)\fnDejaVu Sans\fs40\c&HFFEA83&\b0\i0\fsp2.07\fscx100\fscy100\frz0\alpha&H96&\t(4844,5024,\alpha&H00&)}mean
+Dialogue: 0,0:01:07.94,0:01:14.40,Cap,,0,0,0,,{\an1\pos(673.6,990)\fad(120,120)\fnDejaVu Sans\fs40\c&HFFEA83&\b0\i0\fsp3.58\fscx100\fscy100\frz0\alpha&H96&\t(5124,5604,\alpha&H00&)}everything,
+Dialogue: 0,0:01:07.94,0:01:14.40,Cap,,0,0,0,,{\an1\pos(919.8,990)\fad(120,120)\fnDejaVu Sans\fs40\c&HFFEA83&\b0\i0\fsp4.13\fscx100\fscy100\frz0\alpha&H96&\t(5684,5885,\alpha&H00&)}says
+Dialogue: 0,0:01:07.94,0:01:14.40,Cap,,0,0,0,,{\an1\pos(1024.3,990)\fad(120,120)\fnDejaVu Sans\fs40\c&HFFEA83&\b0\i0\fsp3.58\fscx100\fscy100\frz0\alpha&H96&\t(5925,6105,\alpha&H00&)}he's
+Dialogue: 0,0:01:07.94,0:01:14.40,Cap,,0,0,0,,{\an1\pos(1119.6,990)\fad(120,120)\fnDejaVu Sans\fs40\c&HFFEA83&\b0\i0\fsp3.5\fscx100\fscy100\frz0\alpha&H96&\t(6145,6445,\alpha&H00&)}guilty.
+Dialogue: 0,0:01:14.40,0:01:17.05,Cap,,0,0,0,,{\an1\pos(440.4,990)\fad(120,120)\org(490.5,977.4)\fnLiberation Mono\fs47\c&H6DB88D&\b0\i1\fsp0.26\fscx100\fscy100\frz0\alpha&H96&\t(0,120,\alpha&H00&)\t(0,90,\fscy126\fscx90)\t(90,200,\fscy100\fscx100)}What
+Dialogue: 0,0:01:14.40,0:01:17.05,Cap,,0,0,0,,{\an1\pos(565.5,988.1)\fad(120,120)\fnLiberation Mono\fs40\c&H83B89A&\b0\i1\fsp1.29\fscx100\fscy100\frz0\alpha&H96&\t(120,240,\alpha&H00&)}do
+Dialogue: 0,0:01:14.40,0:01:17.05,Cap,,0,0,0,,{\an1\pos(631.3,988.1)\fad(120,120)\fnLiberation Mono\fs40\c&H83B89A&\b0\i1\fsp2.2\fscx100\fscy100\frz0\alpha&H96&\t(200,320,\alpha&H00&)}you
+Dialogue: 0,0:01:14.40,0:01:17.05,Cap,,0,0,0,,{\an1\pos(722.4,988.1)\fad(120,120)\fnLiberation Mono\fs40\c&H83B89A&\b0\i1\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(320,460,\alpha&H00&)}think,
+Dialogue: 0,0:01:14.40,0:01:17.05,Cap,,0,0,0,,{\an1\pos(870.1,988.1)\fad(120,120)\fnLiberation Mono\fs40\c&H83B89A&\b0\i1\fsp0.79\fscx100\fscy100\frz0\alpha&H96&\t(500,620,\alpha&H00&)}I'm
+Dialogue: 0,0:01:14.40,0:01:17.05,Cap,,0,0,0,,{\an1\pos(956.9,988.1)\fad(120,120)\fnLiberation Mono\fs40\c&H83B89A&\b0\i1\fsp1.36\fscx100\fscy100\frz0\alpha&H96&\t(620,740,\alpha&H00&)}an
+Dialogue: 0,0:01:14.40,0:01:17.05,Cap,,0,0,0,,{\an1\pos(1022.9,988.9)\fad(120,120)\fnLiberation Mono\fs43\c&H78B893&\b0\i1\fsp4.14\fscx100\fscy100\frz0\alpha&H96&\t(720,1001,\alpha&H00&)}idiot
+Dialogue: 0,0:01:14.40,0:01:17.05,Cap,,0,0,0,,{\an1\pos(1179.7,988.1)\fad(120,120)\fnLiberation Mono\fs40\c&H83B89A&\b0\i1\fsp2.85\fscx100\fscy100\frz0\alpha&H96&\t(1021,1141,\alpha&H00&)}or
+Dialogue: 0,0:01:14.40,0:01:17.05,Cap,,0,0,0,,{\an1\pos(1248.7,988.1)\fad(120,120)\fnLiberation Mono\fs40\c&H83B89A&\b0\i1\fsp1.98\fscx100\fscy100\frz0\alpha&H96&\t(1121,1441,\alpha&H00&)}something?
+Dialogue: 0,0:01:18.50,0:01:20.66,Cap,,0,0,0,,{\an1\pos(402,988.8)\fad(120,120)\fnDejaVu Sans\fs43\c&H6BE7FF&\b0\i0\fsp0.8\fscx100\fscy100\frz0\alpha&H96&\t(0,120,\alpha&H00&)}WHY
+Dialogue: 0,0:01:18.50,0:01:20.66,Cap,,0,0,0,,{\an1\pos(502.8,988.6)\fad(120,120)\fnDejaVu Sans\fs42\c&H78E9FF&\b0\i0\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(160,280,\alpha&H00&)}DON'T
+Dialogue: 0,0:01:18.50,0:01:20.66,Cap,,0,0,0,,{\an1\pos(629.1,988.6)\fad(120,120)\fnDejaVu Sans\fs42\c&H78E9FF&\b0\i0\fsp1.66\fscx100\fscy100\frz0\alpha&H96&\t(320,440,\alpha&H00&)}YOU
+Dialogue: 0,0:01:18.50,0:01:20.66,Cap,,0,0,0,,{\an1\pos(720.3,988.6)\fad(120,120)\fnDejaVu Sans\fs42\c&H78E9FF&\b0\i0\fsp0.64\fscx100\fscy100\frz0\alpha&H96&\t(440,620,\alpha&H00&)}TAKE
+Dialogue: 0,0:01:18.50,0:01:20.66,Cap,,0,0,0,,{\an1\pos(824.5,988.6)\fad(120,120)\fnDejaVu Sans\fs42\c&H78E9FF&\b0\i0\fsp0.99\fscx100\fscy100\frz0\alpha&H96&\t(660,820,\alpha&H00&)}THAT
+Dialogue: 0,0:01:18.50,0:01:20.66,Cap,,0,0,0,,{\an1\pos(932.8,990)\fad(120,120)\org(1000.6,980)\fnDejaVu Sans\fs49\c&H4CE2FF&\b0\i0\fsp0.87\fscx100\fscy100\frz0\alpha&H96&\t(840,1081,\alpha&H00&)\t(840,926,\fscy82\fscx109)\t(926,1032,\fscy100\fscx100)}STUFF
+Dialogue: 0,0:01:18.50,0:01:20.66,Cap,,0,0,0,,{\an1\pos(1094.5,988.6)\fad(120,120)\fnDejaVu Sans\fs42\c&H78E9FF&\b0\i0\fsp0.91\fscx100\fscy100\frz0\alpha&H96&\t(1121,1321,\alpha&H00&)}ABOUT
+Dialogue: 0,0:01:18.50,0:01:20.66,Cap,,0,0,0,,{\an1\pos(1235.9,988.6)\fad(120,120)\fnDejaVu Sans\fs42\c&H78E9FF&\b0\i0\fsp0.88\fscx100\fscy100\frz0\alpha&H96&\t(1361,1481,\alpha&H00&)}THE
+Dialogue: 0,0:01:18.50,0:01:20.66,Cap,,0,0,0,,{\an1\pos(1321.8,988.6)\fad(120,120)\fnDejaVu Sans\fs42\c&H78E9FF&\b0\i0\fsp1.46\fscx100\fscy100\frz0\alpha&H96&\t(1521,1661,\alpha&H00&)}OLD
+Dialogue: 0,0:01:18.50,0:01:20.66,Cap,,0,0,0,,{\an1\pos(1413.7,988.6)\fad(120,120)\fnDejaVu Sans\fs42\c&H77E9FF&\b0\i0\fsp1.8\fscx100\fscy100\frz0\alpha&H96&\t(1721,2001,\alpha&H00&)}MAN!
+Dialogue: 0,0:01:20.66,0:01:24.05,Cap,,0,0,0,,{\an1\pos(352,988.8)\fad(120,120)\fnDejaVu Sans\fs42\c&H74E9FF&\b0\i0\fsp0.4\fscx100\fscy100\frz0\alpha&H96&\t(0,120,\alpha&H00&)}THE
+Dialogue: 0,0:01:20.66,0:01:24.05,Cap,,0,0,0,,{\an1\pos(436.4,988.8)\fad(120,120)\fnDejaVu Sans\fs42\c&H74E9FF&\b0\i0\fsp0.59\fscx100\fscy100\frz0\alpha&H96&\t(140,301,\alpha&H00&)}OLD
+Dialogue: 0,0:01:20.66,0:01:24.05,Cap,,0,0,0,,{\an1\pos(525.8,988.8)\fad(120,120)\fnDejaVu Sans\fs42\c&H74E9FF&\b0\i0\fsp1.32\fscx100\fscy100\frz0\alpha&H96&\t(341,521,\alpha&H00&)}MAN
+Dialogue: 0,0:01:20.66,0:01:24.05,Cap,,0,0,0,,{\an1\pos(623.8,988.8)\fad(120,120)\fnDejaVu Sans\fs42\c&H74E9FF&\b0\i0\fsp1.87\fscx100\fscy100\frz0\alpha&H96&\t(541,721,\alpha&H00&)}WHO
+Dialogue: 0,0:01:20.66,0:01:24.05,Cap,,0,0,0,,{\an1\pos(731.8,989.2)\fad(120,120)\fnDejaVu Sans\fs44\c&H65E6FF&\b0\i0\fsp1.13\fscx100\fscy100\frz0\alpha&H96&\t(761,981,\alpha&H00&)}LIVED
+Dialogue: 0,0:01:20.66,0:01:24.05,Cap,,0,0,0,,{\an1\pos(860.3,988.8)\fad(120,120)\fnDejaVu Sans\fs42\c&H74E9FF&\b0\i0\fsp1.2\fscx100\fscy100\frz0\alpha&H96&\t(1041,1241,\alpha&H00&)}THERE
+Dialogue: 0,0:01:20.66,0:01:24.05,Cap,,0,0,0,,{\an1\pos(997.3,988.8)\fad(120,120)\fnDejaVu Sans\fs42\c&H74E9FF&\b0\i0\fsp0.56\fscx100\fscy100\frz0\alpha&H96&\t(1321,1441,\alpha&H00&)}AND
+Dialogue: 0,0:01:20.66,0:01:24.05,Cap,,0,0,0,,{\an1\pos(1089.7,989.4)\fad(120,120)\fnDejaVu Sans\fs45\c&H62E6FF&\b0\i0\fsp0.71\fscx100\fscy100\frz0\alpha&H96&\t(1461,1701,\alpha&H00&)}HEARD
+Dialogue: 0,0:01:20.66,0:01:24.05,Cap,,0,0,0,,{\an1\pos(1241.8,990)\fad(120,120)\org(1402.8,980.2)\fnDejaVu Sans\fs48\c&H54E4FF&\b0\i0\fsp2.24\fscx100\fscy100\frz0\alpha&H96&\t(1922,2782,\alpha&H00&)\t(1922,2174,\fscy97\fscx101)\t(2174,2482,\fscy100\fscx100)}EVERYTHING!!
+Dialogue: 0,0:01:25.61,0:01:26.79,Cap,,0,0,0,,{\an1\pos(544.1,988.4)\fad(120,120)\fnDejaVu Serif\fs41\c&H8A95A7&\b0\i0\fsp0.83\fscx100\fscy100\frz0\alpha&H96&\t(0,120,\alpha&H00&)}OR
+Dialogue: 0,0:01:25.61,0:01:26.79,Cap,,0,0,0,,{\an1\pos(612.2,988.4)\fad(120,120)\fnDejaVu Serif\fs41\c&H8A95A7&\b0\i0\fsp2.13\fscx100\fscy100\frz0\alpha&H96&\t(100,260,\alpha&H00&)}THIS
+Dialogue: 0,0:01:25.61,0:01:26.79,Cap,,0,0,0,,{\an1\pos(724,990)\fad(120,120)\org(846.9,980)\fnDejaVu Serif\fs49\c&H808EA7&\b0\i0\fsp1.25\fscx100\fscy100\frz0\alpha&H96&\t(280,540,\alpha&H00&)\t(280,340,\fscy112\fscx95)\t(340,400,\fscy90\fscx105)\t(400,461,\fscy100\fscx100)}BUSINESS
+Dialogue: 0,0:01:25.61,0:01:26.79,Cap,,0,0,0,,{\an1\pos(994.7,988.4)\fad(120,120)\fnDejaVu Serif\fs41\c&H8A95A7&\b0\i0\fsp0.9\fscx100\fscy100\frz0\alpha&H96&\t(580,780,\alpha&H00&)}ABOUT
+Dialogue: 0,0:01:25.61,0:01:26.79,Cap,,0,0,0,,{\an1\pos(1144.1,988.4)\fad(120,120)\fnDejaVu Serif\fs41\c&H8A95A7&\b0\i0\fsp1.17\fscx100\fscy100\frz0\alpha&H96&\t(820,940,\alpha&H00&)}THE
+Dialogue: 0,0:01:25.61,0:01:26.79,Cap,,0,0,0,,{\an1\pos(1238.5,988.4)\fad(120,120)\fnDejaVu Serif\fs41\c&H8A95A7&\b0\i0\fsp0.39\fscx100\fscy100\frz0\alpha&H96&\t(940,1161,\alpha&H00&)}KNIFE!
+Dialogue: 0,0:01:26.79,0:01:29.30,Cap,,0,0,0,,{\an1\pos(432.4,989.4)\fad(120,120)\fnDejaVu Sans\fs41\c&H87A0B3&\b0\i0\fsp0.73\fscx100\fscy100\frz0\alpha&H96&\t(0,220,\alpha&H00&)}WHAT,
+Dialogue: 0,0:01:26.79,0:01:29.30,Cap,,0,0,0,,{\an1\pos(562.3,989.4)\fad(120,120)\fnDejaVu Sans\fs41\c&H87A0B3&\b0\i0\fsp1.21\fscx100\fscy100\frz0\alpha&H96&\t(240,580,\alpha&H00&)}POSSIBLY
+Dialogue: 0,0:01:26.79,0:01:29.30,Cap,,0,0,0,,{\an1\pos(747.5,990)\fad(120,120)\fnDejaVu Sans\fs44\c&H819DB3&\b0\i0\fsp0.38\fscx100\fscy100\frz0\alpha&H96&\t(600,780,\alpha&H00&)}FOUND
+Dialogue: 0,0:01:26.79,0:01:29.30,Cap,,0,0,0,,{\an1\pos(897.6,989.4)\fad(120,120)\fnDejaVu Sans\fs41\c&H87A0B3&\b0\i0\fsp0.61\fscx100\fscy100\frz0\alpha&H96&\t(820,1040,\alpha&H00&)}ANOTHER
+Dialogue: 0,0:01:26.79,0:01:29.30,Cap,,0,0,0,,{\an1\pos(1085.6,989.4)\fad(120,120)\fnDejaVu Sans\fs41\c&H87A0B3&\b0\i0\fsp0.3\fscx100\fscy100\frz0\alpha&H96&\t(1080,1200,\alpha&H00&)}ONE
+Dialogue: 0,0:01:26.79,0:01:29.30,Cap,,0,0,0,,{\an1\pos(1173.8,989.4)\fad(120,120)\fnDejaVu Sans\fs41\c&H87A0B3&\b0\i0\fsp1.86\fscx100\fscy100\frz0\alpha&H96&\t(1180,1581,\alpha&H00&)}EXACTLY
+Dialogue: 0,0:01:26.79,0:01:29.30,Cap,,0,0,0,,{\an1\pos(1350.1,989.4)\fad(120,120)\fnDejaVu Sans\fs41\c&H87A0B3&\b0\i0\fsp0.48\fscx100\fscy100\frz0\alpha&H96&\t(1621,1821,\alpha&H00&)}LIKE
+Dialogue: 0,0:01:26.79,0:01:29.30,Cap,,0,0,0,,{\an1\pos(1438.4,990)\fad(120,120)\fnDejaVu Sans\fs44\c&H829EB3&\b0\i0\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(1861,1981,\alpha&H00&)}IT!
+Dialogue: 0,0:01:29.30,0:01:32.76,Cap,,0,0,0,,{\an1\pos(441.3,989.4)\fad(120,120)\fnDejaVu Sans\fs42\c&H74E9FF&\b0\i0\fsp1.07\fscx100\fscy100\frz0\alpha&H96&\t(0,120,\alpha&H00&)}THE
+Dialogue: 0,0:01:29.30,0:01:32.76,Cap,,0,0,0,,{\an1\pos(527.8,989.4)\fad(120,120)\fnDejaVu Sans\fs42\c&H74E9FF&\b0\i0\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(200,360,\alpha&H00&)}OLD
+Dialogue: 0,0:01:29.30,0:01:32.76,Cap,,0,0,0,,{\an1\pos(615.4,990)\fad(120,120)\fnDejaVu Sans\fs45\c&H60E5FF&\b0\i0\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(380,700,\alpha&H00&)}MAN
+Dialogue: 0,0:01:29.30,0:01:32.76,Cap,,0,0,0,,{\an1\pos(716.1,989.4)\fad(120,120)\fnDejaVu Sans\fs42\c&H74E9FF&\b0\i0\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(800,940,\alpha&H00&)}SAW
+Dialogue: 0,0:01:29.30,0:01:32.76,Cap,,0,0,0,,{\an1\pos(809.4,989.4)\fad(120,120)\fnDejaVu Sans\fs42\c&H74E9FF&\b0\i0\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(1060,1240,\alpha&H00&)}HIM
+Dialogue: 0,0:01:29.30,0:01:32.76,Cap,,0,0,0,,{\an1\pos(889.5,989.4)\fad(120,120)\fnDejaVu Sans\fs42\c&H74E9FF&\b0\i0\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(1520,1761,\alpha&H00&)}RIGHT
+Dialogue: 0,0:01:29.30,0:01:32.76,Cap,,0,0,0,,{\an1\pos(1013.6,989.6)\fad(120,120)\fnDejaVu Sans\fs43\c&H6EE8FF&\b0\i0\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(1801,2041,\alpha&H00&)}THERE
+Dialogue: 0,0:01:29.30,0:01:32.76,Cap,,0,0,0,,{\an1\pos(1147.7,989.4)\fad(120,120)\fnDejaVu Sans\fs42\c&H74E9FF&\b0\i0\fsp1.23\fscx100\fscy100\frz0\alpha&H96&\t(2081,2201,\alpha&H00&)}ON
+Dialogue: 0,0:01:29.30,0:01:32.76,Cap,,0,0,0,,{\an1\pos(1216.9,989.4)\fad(120,120)\fnDejaVu Sans\fs42\c&H74E9FF&\b0\i0\fsp1.7\fscx100\fscy100\frz0\alpha&H96&\t(2201,2321,\alpha&H00&)}THE
+Dialogue: 0,0:01:29.30,0:01:32.76,Cap,,0,0,0,,{\an1\pos(1305.2,990)\fad(120,120)\fnDejaVu Sans\fs45\c&H5FE5FF&\b0\i0\fsp1.05\fscx100\fscy100\frz0\alpha&H96&\t(2361,2861,\alpha&H00&)}STAIRS!!
+Dialogue: 0,0:01:32.82,0:01:35.53,Cap,,0,0,0,,{\an1\pos(429.7,989.6)\fad(120,120)\fnDejaVu Sans\fs42\c&HB0D9A7&\b0\i0\fsp0.54\fscx100\fscy100\frz0\alpha&H96&\t(0,180,\alpha&H00&)}WHAT'S
+Dialogue: 0,0:01:32.82,0:01:35.53,Cap,,0,0,0,,{\an1\pos(583.7,989.4)\fad(120,120)\fnDejaVu Sans\fs41\c&HB2D9A9&\b0\i0\fsp1.08\fscx100\fscy100\frz0\alpha&H96&\t(200,320,\alpha&H00&)}THE
+Dialogue: 0,0:01:32.82,0:01:35.53,Cap,,0,0,0,,{\an1\pos(668.2,989.6)\fad(120,120)\fnDejaVu Sans\fs42\c&HB0D9A7&\b0\i0\fsp0.47\fscx100\fscy100\frz0\alpha&H96&\t(320,620,\alpha&H00&)}DIFFERENCE
+Dialogue: 0,0:01:32.82,0:01:35.53,Cap,,0,0,0,,{\an1\pos(909.4,990)\fad(120,120)\fnDejaVu Sans\fs44\c&HACD9A2&\b0\i0\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(660,800,\alpha&H00&)}HOW
+Dialogue: 0,0:01:32.82,0:01:35.53,Cap,,0,0,0,,{\an1\pos(1016.7,989.4)\fad(120,120)\fnDejaVu Sans\fs41\c&HB2D9A9&\b0\i0\fsp1.81\fscx100\fscy100\frz0\alpha&H96&\t(820,1060,\alpha&H00&)}MANY
+Dialogue: 0,0:01:32.82,0:01:35.53,Cap,,0,0,0,,{\an1\pos(1137.2,989.4)\fad(120,120)\fnDejaVu Sans\fs41\c&HB2D9A9&\b0\i0\fsp2.32\fscx100\fscy100\frz0\alpha&H96&\t(1100,1380,\alpha&H00&)}SECONDS
+Dialogue: 0,0:01:32.82,0:01:35.53,Cap,,0,0,0,,{\an1\pos(1337,989.4)\fad(120,120)\fnDejaVu Sans\fs41\c&HB2D9A9&\b0\i0\fsp1.55\fscx100\fscy100\frz0\alpha&H96&\t(1420,1540,\alpha&H00&)}IT
+Dialogue: 0,0:01:32.82,0:01:35.53,Cap,,0,0,0,,{\an1\pos(1383.1,989.4)\fad(120,120)\fnDejaVu Sans\fs41\c&HB2D9A9&\b0\i0\fsp3.47\fscx100\fscy100\frz0\alpha&H96&\t(1520,1741,\alpha&H00&)}WAS!
+Dialogue: 0,0:01:36.82,0:01:38.84,Cap,,0,0,0,,{\an1\pos(782.9,990)\fad(120,120)\fnLiberation Serif\fs40\c&HD1AA96&\b0\i0\fsp5.31\fscx100\fscy100\frz0\alpha&H96&\t(0,360,\alpha&H00&)}Every
+Dialogue: 0,0:01:36.82,0:01:38.84,Cap,,0,0,0,,{\an1\pos(904.6,990)\fad(120,120)\fnLiberation Serif\fs40\c&HD1AA96&\b0\i0\fsp5.13\fscx100\fscy100\frz0\alpha&H96&\t(560,1040,\alpha&H00&)}single
+Dialogue: 0,0:01:36.82,0:01:38.84,Cap,,0,0,0,,{\an1\pos(1030.6,990)\fad(120,120)\fnLiberation Serif\fs40\c&HD1AA95&\b0\i0\fsp3.88\fscx100\fscy100\frz0\alpha&H96&\t(1140,1421,\alpha&H00&)}thing.
+Dialogue: 0,0:01:40.17,0:01:43.31,Cap,,0,0,0,,{\an1\pos(397.2,989.5)\fad(120,120)\fnLiberation Mono\fs42\c&H7BB895&\b0\i1\fsp2.53\fscx100\fscy100\frz0\alpha&H96&\t(0,140,\alpha&H00&)}The
+Dialogue: 0,0:01:40.17,0:01:43.31,Cap,,0,0,0,,{\an1\pos(493.4,989.7)\fad(120,120)\fnLiberation Mono\fs43\c&H77B893&\b0\i1\fsp2.33\fscx100\fscy100\frz0\alpha&H96&\t(180,460,\alpha&H00&)}knife
+Dialogue: 0,0:01:40.17,0:01:43.31,Cap,,0,0,0,,{\an1\pos(641.2,990)\fad(120,120)\fnLiberation Mono\fs44\c&H75B892&\b0\i1\fsp1.96\fscx100\fscy100\frz0\alpha&H96&\t(540,960,\alpha&H00&)}falling
+Dialogue: 0,0:01:40.17,0:01:43.31,Cap,,0,0,0,,{\an1\pos(840.6,988.9)\fad(120,120)\fnLiberation Mono\fs40\c&H81B898&\b0\i1\fsp2.04\fscx100\fscy100\frz0\alpha&H96&\t(980,1240,\alpha&H00&)}through
+Dialogue: 0,0:01:40.17,0:01:43.31,Cap,,0,0,0,,{\an1\pos(1023.7,988.9)\fad(120,120)\fnLiberation Mono\fs40\c&H81B898&\b0\i1\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(1340,1460,\alpha&H00&)}a
+Dialogue: 0,0:01:40.17,0:01:43.31,Cap,,0,0,0,,{\an1\pos(1065.9,989.2)\fad(120,120)\fnLiberation Mono\fs41\c&H7EB897&\b0\i1\fsp3.12\fscx100\fscy100\frz0\alpha&H96&\t(1421,1761,\alpha&H00&)}hole
+Dialogue: 0,0:01:40.17,0:01:43.31,Cap,,0,0,0,,{\an1\pos(1186.5,988.9)\fad(120,120)\fnLiberation Mono\fs40\c&H81B898&\b0\i1\fsp3.13\fscx100\fscy100\frz0\alpha&H96&\t(1821,1941,\alpha&H00&)}in
+Dialogue: 0,0:01:40.17,0:01:43.31,Cap,,0,0,0,,{\an1\pos(1256.1,988.9)\fad(120,120)\fnLiberation Mono\fs40\c&H81B898&\b0\i1\fsp3.71\fscx100\fscy100\frz0\alpha&H96&\t(1941,2081,\alpha&H00&)}his
+Dialogue: 0,0:01:40.17,0:01:43.31,Cap,,0,0,0,,{\an1\pos(1351.7,988.9)\fad(120,120)\fnLiberation Mono\fs40\c&H81B898&\b0\i1\fsp3.35\fscx100\fscy100\frz0\alpha&H96&\t(2201,2541,\alpha&H00&)}pocket.
+Dialogue: 0,0:01:43.53,0:01:46.27,Cap,,0,0,0,,{\an1\pos(472.9,990)\fad(120,120)\org(517.9,980.2)\fnDejaVu Sans\fs48\c&H53E3FF&\b0\i0\fsp1.53\fscx100\fscy100\frz0\alpha&H96&\t(0,220,\alpha&H00&)\t(0,58,\fscy108\fscx97)\t(58,116,\fscy94\fscx103)\t(116,175,\fscy100\fscx100)}YOU
+Dialogue: 0,0:01:43.53,0:01:46.27,Cap,,0,0,0,,{\an1\pos(578.6,989.6)\fad(120,120)\fnDejaVu Sans\fs46\c&H5CE5FF&\b0\i0\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(280,600,\alpha&H00&)}CAN'T
+Dialogue: 0,0:01:43.53,0:01:46.27,Cap,,0,0,0,,{\an1\pos(710,989)\fad(120,120)\fnDejaVu Sans\fs43\c&H6BE7FF&\b0\i0\fsp0.29\fscx100\fscy100\frz0\alpha&H96&\t(720,1040,\alpha&H00&)}PROVE
+Dialogue: 0,0:01:43.53,0:01:46.27,Cap,,0,0,0,,{\an1\pos(847.9,988.8)\fad(120,120)\fnDejaVu Sans\fs42\c&H75E9FF&\b0\i0\fsp1.29\fscx100\fscy100\frz0\alpha&H96&\t(1060,1180,\alpha&H00&)}HE
+Dialogue: 0,0:01:43.53,0:01:46.27,Cap,,0,0,0,,{\an1\pos(911.8,988.8)\fad(120,120)\fnDejaVu Sans\fs42\c&H75E9FF&\b0\i0\fsp1.85\fscx100\fscy100\frz0\alpha&H96&\t(1200,1420,\alpha&H00&)}DIDN'T
+Dialogue: 0,0:01:43.53,0:01:46.27,Cap,,0,0,0,,{\an1\pos(1059.2,988.8)\fad(120,120)\fnDejaVu Sans\fs42\c&H75E9FF&\b0\i0\fsp2.21\fscx100\fscy100\frz0\alpha&H96&\t(1440,1581,\alpha&H00&)}GET
+Dialogue: 0,0:01:43.53,0:01:46.27,Cap,,0,0,0,,{\an1\pos(1149.9,988.8)\fad(120,120)\fnDejaVu Sans\fs42\c&H75E9FF&\b0\i0\fsp1.13\fscx100\fscy100\frz0\alpha&H96&\t(1621,1741,\alpha&H00&)}TO
+Dialogue: 0,0:01:43.53,0:01:46.27,Cap,,0,0,0,,{\an1\pos(1213.9,988.8)\fad(120,120)\fnDejaVu Sans\fs42\c&H75E9FF&\b0\i0\fsp1.78\fscx100\fscy100\frz0\alpha&H96&\t(1721,1841,\alpha&H00&)}THE
+Dialogue: 0,0:01:43.53,0:01:46.27,Cap,,0,0,0,,{\an1\pos(1302.5,988.8)\fad(120,120)\fnDejaVu Sans\fs42\c&H75E9FF&\b0\i0\fsp1.05\fscx100\fscy100\frz0\alpha&H96&\t(1861,2141,\alpha&H00&)}DOOR!!
+Dialogue: 0,0:01:46.95,0:01:51.65,Cap,,0,0,0,,{\an1\pos(171.1,988.8)\fad(120,120)\fnDejaVu Sans Condensed\fs43\c&H659CE3&\b0\i0\fsp1.14\fscx100\fscy100\frz0\alpha&H96&\t(0,220,\alpha&H00&)}SURE,
+Dialogue: 0,0:01:46.95,0:01:51.65,Cap,,0,0,0,,{\an1\pos(287.2,988.4)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&H6FA2E3&\b0\i0\fsp1.26\fscx100\fscy100\frz0\alpha&H96&\t(240,360,\alpha&H00&)}YOU
+Dialogue: 0,0:01:46.95,0:01:51.65,Cap,,0,0,0,,{\an1\pos(366.4,988.4)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&H6FA2E3&\b0\i0\fsp2.19\fscx100\fscy100\frz0\alpha&H96&\t(360,480,\alpha&H00&)}CAN
+Dialogue: 0,0:01:46.95,0:01:51.65,Cap,,0,0,0,,{\an1\pos(450.4,988.4)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&H6FA2E3&\b0\i0\fsp1.25\fscx100\fscy100\frz0\alpha&H96&\t(500,660,\alpha&H00&)}TAKE
+Dialogue: 0,0:01:46.95,0:01:51.65,Cap,,0,0,0,,{\an1\pos(544.3,988.4)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&H6FA2E3&\b0\i0\fsp1.01\fscx100\fscy100\frz0\alpha&H96&\t(700,820,\alpha&H00&)}ALL
+Dialogue: 0,0:01:46.95,0:01:51.65,Cap,,0,0,0,,{\an1\pos(614.2,988.4)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&H6FA2E3&\b0\i0\fsp0.65\fscx100\fscy100\frz0\alpha&H96&\t(840,960,\alpha&H00&)}THE
+Dialogue: 0,0:01:46.95,0:01:51.65,Cap,,0,0,0,,{\an1\pos(689.3,988.4)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&H6FA2E3&\b0\i0\fsp0.87\fscx100\fscy100\frz0\alpha&H96&\t(960,1240,\alpha&H00&)}TIME,
+Dialogue: 0,0:01:46.95,0:01:51.65,Cap,,0,0,0,,{\an1\pos(789.6,988.4)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&H6FA2E3&\b0\i0\fsp0.81\fscx100\fscy100\frz0\alpha&H96&\t(1260,1560,\alpha&H00&)}HOBBLE
+Dialogue: 0,0:01:46.95,0:01:51.65,Cap,,0,0,0,,{\an1\pos(934.1,988.4)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&H6FA2E3&\b0\i0\fsp0.6\fscx100\fscy100\frz0\alpha&H96&\t(1600,1861,\alpha&H00&)}AROUND
+Dialogue: 0,0:01:46.95,0:01:51.65,Cap,,0,0,0,,{\an1\pos(1087.4,988.4)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&H6FA2E3&\b0\i0\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(1881,2001,\alpha&H00&)}THE
+Dialogue: 0,0:01:46.95,0:01:51.65,Cap,,0,0,0,,{\an1\pos(1160.5,988.4)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&H6FA2E3&\b0\i0\fsp0.61\fscx100\fscy100\frz0\alpha&H96&\t(1981,2221,\alpha&H00&)}ROOM,
+Dialogue: 0,0:01:46.95,0:01:51.65,Cap,,0,0,0,,{\an1\pos(1282.6,988.4)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&H6FA2E3&\b0\i0\fsp2.36\fscx100\fscy100\frz0\alpha&H96&\t(2521,2681,\alpha&H00&)}BUT
+Dialogue: 0,0:01:46.95,0:01:51.65,Cap,,0,0,0,,{\an1\pos(1363.9,988.4)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&H6FA2E3&\b0\i0\fsp2.48\fscx100\fscy100\frz0\alpha&H96&\t(2721,2921,\alpha&H00&)}YOU
+Dialogue: 0,0:01:46.95,0:01:51.65,Cap,,0,0,0,,{\an1\pos(1446.8,988.6)\fad(120,120)\fnDejaVu Sans Condensed\fs42\c&H6EA1E3&\b0\i0\fsp1.27\fscx100\fscy100\frz0\alpha&H96&\t(2961,3301,\alpha&H00&)}CAN'T
+Dialogue: 0,0:01:46.95,0:01:51.65,Cap,,0,0,0,,{\an1\pos(1561.1,990)\fad(120,120)\org(1625.6,980)\fnDejaVu Sans Condensed\fs49\c&H4A8DE3&\b0\i0\fsp0.28\fscx100\fscy100\frz0\alpha&H96&\t(3401,3681,\alpha&H00&)\t(3401,3501,\fscy106\fscx97)\t(3501,3625,\fscy100\fscx100)}PROVE
+Dialogue: 0,0:01:46.95,0:01:51.65,Cap,,0,0,0,,{\an1\pos(1702.2,988.4)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&H6FA2E3&\b0\i0\fsp1.8\fscx100\fscy100\frz0\alpha&H96&\t(3761,3881,\alpha&H00&)}IT!
+Dialogue: 0,0:01:54.39,0:01:56.35,Cap,,0,0,0,,{\an1\pos(584.8,989.4)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&H6666CC&\b0\i0\fsp0.45\fscx100\fscy100\frz0\alpha&H96&\t(0,120,\alpha&H00&)}AND
+Dialogue: 0,0:01:54.39,0:01:56.35,Cap,,0,0,0,,{\an1\pos(665.8,990)\fad(120,120)\fnDejaVu Sans Condensed\fs44\c&H5858CC&\b0\i0\fsp0.08\fscx100\fscy100\frz0\alpha&H96&\t(100,240,\alpha&H00&)}WHAT
+Dialogue: 0,0:01:54.39,0:01:56.35,Cap,,0,0,0,,{\an1\pos(777,989.4)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&H6666CC&\b0\i0\fsp0.66\fscx100\fscy100\frz0\alpha&H96&\t(280,480,\alpha&H00&)}ABOUT
+Dialogue: 0,0:01:54.39,0:01:56.35,Cap,,0,0,0,,{\an1\pos(900.3,989.4)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&H6666CC&\b0\i0\fsp1.58\fscx100\fscy100\frz0\alpha&H96&\t(500,640,\alpha&H00&)}THIS
+Dialogue: 0,0:01:54.39,0:01:56.35,Cap,,0,0,0,,{\an1\pos(989.2,989.6)\fad(120,120)\fnDejaVu Sans Condensed\fs42\c&H6363CC&\b0\i0\fsp1.27\fscx100\fscy100\frz0\alpha&H96&\t(700,980,\alpha&H00&)}BUSINESS
+Dialogue: 0,0:01:54.39,0:01:56.35,Cap,,0,0,0,,{\an1\pos(1171.5,989.4)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&H6666CC&\b0\i0\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(1000,1120,\alpha&H00&)}OF
+Dialogue: 0,0:01:54.39,0:01:56.35,Cap,,0,0,0,,{\an1\pos(1224.6,989.4)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&H6666CC&\b0\i0\fsp0.68\fscx100\fscy100\frz0\alpha&H96&\t(1060,1181,\alpha&H00&)}THE
+Dialogue: 0,0:01:54.39,0:01:56.35,Cap,,0,0,0,,{\an1\pos(1299.7,989.4)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&H6666CC&\b0\i0\fsp2.6\fscx100\fscy100\frz0\alpha&H96&\t(1441,1561,\alpha&H00&)}L!
+Dialogue: 0,0:01:56.35,0:01:57.62,Cap,,0,0,0,,{\an1\pos(773.9,989)\fad(120,120)\fnDejaVu Sans\fs42\c&H75E9FF&\b0\i0\fsp0.66\fscx100\fscy100\frz0\alpha&H96&\t(0,120,\alpha&H00&)}AND
+Dialogue: 0,0:01:56.35,0:01:57.62,Cap,,0,0,0,,{\an1\pos(866.6,989)\fad(120,120)\fnDejaVu Sans\fs42\c&H75E9FF&\b0\i0\fsp0.28\fscx100\fscy100\frz0\alpha&H96&\t(120,260,\alpha&H00&)}THE
+Dialogue: 0,0:01:56.35,0:01:57.62,Cap,,0,0,0,,{\an1\pos(950.7,990)\fad(120,120)\fnDejaVu Sans\fs47\c&H59E4FF&\b0\i0\fsp0.87\fscx100\fscy100\frz0\alpha&H96&\t(280,800,\alpha&H00&)}MOVIES!!
+Dialogue: 0,0:01:57.62,0:02:01.54,Cap,,0,0,0,,{\an1\pos(519.9,988.2)\fad(120,120)\fnDejaVu Sans\fs43\c&HFFE770&\b0\i0\fsp2.52\fscx100\fscy100\frz0\alpha&H96&\t(0,360,\alpha&H00&)}There's
+Dialogue: 0,0:01:57.62,0:02:01.54,Cap,,0,0,0,,{\an1\pos(684.1,987.6)\fad(120,120)\fnDejaVu Sans\fs40\c&HFFEA83&\b0\i0\fsp4.98\fscx100\fscy100\frz0\alpha&H96&\t(460,580,\alpha&H00&)}a
+Dialogue: 0,0:01:57.62,0:02:01.54,Cap,,0,0,0,,{\an1\pos(721,987.6)\fad(120,120)\fnDejaVu Sans\fs40\c&HFFEA83&\b0\i0\fsp4.74\fscx100\fscy100\frz0\alpha&H96&\t(680,1060,\alpha&H00&)}phony
+Dialogue: 0,0:01:57.62,0:02:01.54,Cap,,0,0,0,,{\an1\pos(862.1,987.6)\fad(120,120)\fnDejaVu Sans\fs40\c&HFFEA83&\b0\i0\fsp4.35\fscx100\fscy100\frz0\alpha&H96&\t(1100,1321,\alpha&H00&)}deal
+Dialogue: 0,0:01:57.62,0:02:01.54,Cap,,0,0,0,,{\an1\pos(963.8,987.6)\fad(120,120)\fnDejaVu Sans\fs40\c&HFFEA83&\b0\i0\fsp1.59\fscx100\fscy100\frz0\alpha&H96&\t(1361,1481,\alpha&H00&)}if
+Dialogue: 0,0:01:57.62,0:02:01.54,Cap,,0,0,0,,{\an1\pos(999.5,987.6)\fad(120,120)\fnDejaVu Sans\fs40\c&HFFEA83&\b0\i0\fsp2.7\fscx100\fscy100\frz0\alpha&H96&\t(1481,1601,\alpha&H00&)}I
+Dialogue: 0,0:01:57.62,0:02:01.54,Cap,,0,0,0,,{\an1\pos(1023.2,987.6)\fad(120,120)\fnDejaVu Sans\fs40\c&HFFEA83&\b0\i0\fsp4.43\fscx100\fscy100\frz0\alpha&H96&\t(1621,1861,\alpha&H00&)}ever
+Dialogue: 0,0:01:57.62,0:02:01.54,Cap,,0,0,0,,{\an1\pos(1128.4,987.6)\fad(120,120)\fnDejaVu Sans\fs40\c&HFFEA83&\b0\i0\fsp4.97\fscx100\fscy100\frz0\alpha&H96&\t(1901,2221,\alpha&H00&)}heard
+Dialogue: 0,0:01:57.62,0:02:01.54,Cap,,0,0,0,,{\an1\pos(1293.2,987.6)\fad(120,120)\fnDejaVu Sans\fs40\c&HFFEA83&\b0\i0\fsp1.82\fscx100\fscy100\frz0\alpha&H96&\t(3221,3401,\alpha&H00&)}of
+Dialogue: 0,0:01:57.62,0:02:01.54,Cap,,0,0,0,,{\an1\pos(1340.8,990)\fad(120,120)\org(1370.1,979.4)\fnDejaVu Sans\fs52\c&HFFDF41&\b1\i0\fsp1.72\fscx100\fscy100\frz0\alpha&H96&\t(3542,3902,\alpha&H00&)\t(3542,3671,\fscy98\fscx101)\t(3671,3829,\fscy100\fscx100)}it.
+Dialogue: 0,0:02:01.54,0:02:04.98,Cap,,0,0,0,,{\an1\pos(441.9,988)\fad(120,120)\fnDejaVu Sans\fs41\c&H7BEAFF&\b0\i0\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(0,120,\alpha&H00&)}I
+Dialogue: 0,0:02:01.54,0:02:04.98,Cap,,0,0,0,,{\an1\pos(463.4,990)\fad(120,120)\org(505.9,979.6)\fnDejaVu Sans\fs51\c&H47E1FF&\b0\i0\fsp0.2\fscx100\fscy100\frz0\alpha&H96&\t(120,480,\alpha&H00&)\t(120,249,\fscy93\fscx103)\t(249,407,\fscy100\fscx100)}BET
+Dialogue: 0,0:02:01.54,0:02:04.98,Cap,,0,0,0,,{\an1\pos(565,988.6)\fad(120,120)\fnDejaVu Sans\fs44\c&H67E7FF&\b0\i0\fsp1.85\fscx100\fscy100\frz0\alpha&H96&\t(560,1040,\alpha&H00&)}YOU
+Dialogue: 0,0:02:01.54,0:02:04.98,Cap,,0,0,0,,{\an1\pos(660.8,988)\fad(120,120)\fnDejaVu Sans\fs41\c&H7BEAFF&\b0\i0\fsp1.29\fscx100\fscy100\frz0\alpha&H96&\t(1180,1500,\alpha&H00&)}$5,000
+Dialogue: 0,0:02:01.54,0:02:04.98,Cap,,0,0,0,,{\an1\pos(802.7,988)\fad(120,120)\fnDejaVu Sans\fs41\c&H7BEAFF&\b0\i0\fsp2\fscx100\fscy100\frz0\alpha&H96&\t(1660,1800,\alpha&H00&)}I'D
+Dialogue: 0,0:02:01.54,0:02:04.98,Cap,,0,0,0,,{\an1\pos(866.9,988)\fad(120,120)\fnDejaVu Sans\fs41\c&H7BEAFF&\b0\i0\fsp2.49\fscx100\fscy100\frz0\alpha&H96&\t(1840,2281,\alpha&H00&)}REMEMBER
+Dialogue: 0,0:02:01.54,0:02:04.98,Cap,,0,0,0,,{\an1\pos(1098.2,988)\fad(120,120)\fnDejaVu Sans\fs41\c&H7BEAFF&\b0\i0\fsp0.48\fscx100\fscy100\frz0\alpha&H96&\t(2321,2441,\alpha&H00&)}THE
+Dialogue: 0,0:02:01.54,0:02:04.98,Cap,,0,0,0,,{\an1\pos(1180.9,988)\fad(120,120)\fnDejaVu Sans\fs41\c&H7BEAFF&\b0\i0\fsp3.14\fscx100\fscy100\frz0\alpha&H96&\t(2441,2801,\alpha&H00&)}MOVIES
+Dialogue: 0,0:02:01.54,0:02:04.98,Cap,,0,0,0,,{\an1\pos(1347.2,988)\fad(120,120)\fnDejaVu Sans\fs41\c&H7BEAFF&\b0\i0\fsp4.99\fscx100\fscy100\frz0\alpha&H96&\t(2921,3061,\alpha&H00&)}I
+Dialogue: 0,0:02:01.54,0:02:04.98,Cap,,0,0,0,,{\an1\pos(1373.7,988)\fad(120,120)\fnDejaVu Sans\fs41\c&H7BEAFF&\b0\i0\fsp2.62\fscx100\fscy100\frz0\alpha&H96&\t(3081,3361,\alpha&H00&)}SAW!
+Dialogue: 0,0:02:04.98,0:02:10.65,Cap,,0,0,0,,{\an1\pos(212.7,988.2)\fad(120,120)\fnDejaVu Sans\fs41\c&HFFE97E&\b0\i0\fsp2.59\fscx100\fscy100\frz0\alpha&H96&\t(0,140,\alpha&H00&)}I'm
+Dialogue: 0,0:02:04.98,0:02:10.65,Cap,,0,0,0,,{\an1\pos(285.9,988.2)\fad(120,120)\fnDejaVu Sans\fs41\c&HFFE97E&\b0\i0\fsp2.14\fscx100\fscy100\frz0\alpha&H96&\t(200,520,\alpha&H00&)}telling
+Dialogue: 0,0:02:04.98,0:02:10.65,Cap,,0,0,0,,{\an1\pos(421.3,988.2)\fad(120,120)\fnDejaVu Sans\fs41\c&HFFE97E&\b0\i0\fsp1.83\fscx100\fscy100\frz0\alpha&H96&\t(560,720,\alpha&H00&)}you,
+Dialogue: 0,0:02:04.98,0:02:10.65,Cap,,0,0,0,,{\an1\pos(515.6,988.2)\fad(120,120)\fnDejaVu Sans\fs41\c&HFFE97E&\b0\i0\fsp3.65\fscx100\fscy100\frz0\alpha&H96&\t(760,1441,\alpha&H00&)}everything
+Dialogue: 0,0:02:04.98,0:02:10.65,Cap,,0,0,0,,{\an1\pos(752.9,988.2)\fad(120,120)\fnDejaVu Sans\fs41\c&HFFE97E&\b0\i0\fsp2.15\fscx100\fscy100\frz0\alpha&H96&\t(1461,1681,\alpha&H00&)}that's
+Dialogue: 0,0:02:04.98,0:02:10.65,Cap,,0,0,0,,{\an1\pos(876.3,988.2)\fad(120,120)\fnDejaVu Sans\fs41\c&HFFE97E&\b0\i0\fsp3.49\fscx100\fscy100\frz0\alpha&H96&\t(1741,2021,\alpha&H00&)}gone
+Dialogue: 0,0:02:04.98,0:02:10.65,Cap,,0,0,0,,{\an1\pos(989.2,988.2)\fad(120,120)\fnDejaVu Sans\fs41\c&HFFE97E&\b0\i0\fsp1.33\fscx100\fscy100\frz0\alpha&H96&\t(2161,2281,\alpha&H00&)}on
+Dialogue: 0,0:02:04.98,0:02:10.65,Cap,,0,0,0,,{\an1\pos(1046.8,988.2)\fad(120,120)\fnDejaVu Sans\fs41\c&HFFE97E&\b0\i0\fsp3.79\fscx100\fscy100\frz0\alpha&H96&\t(2301,2501,\alpha&H00&)}has
+Dialogue: 0,0:02:04.98,0:02:10.65,Cap,,0,0,0,,{\an1\pos(1131.4,988.2)\fad(120,120)\fnDejaVu Sans\fs41\c&HFFE97E&\b0\i0\fsp2.64\fscx100\fscy100\frz0\alpha&H96&\t(2541,2781,\alpha&H00&)}been
+Dialogue: 0,0:02:04.98,0:02:10.65,Cap,,0,0,0,,{\an1\pos(1241,990)\fad(120,120)\org(1330.6,979.8)\fnDejaVu Sans\fs50\c&HFFE14B&\b0\i0\fsp3.25\fscx100\fscy100\frz0\alpha&H96&\t(2981,3642,\alpha&H00&)\t(2981,3157,\fscy110\fscx96)\t(3157,3333,\fscy92\fscx104)\t(3333,3509,\fscy100\fscx100)}twisted
+Dialogue: 0,0:02:04.98,0:02:10.65,Cap,,0,0,0,,{\an1\pos(1458.9,988.2)\fad(120,120)\fnDejaVu Sans\fs41\c&HFFE97E&\b0\i0\fsp2.88\fscx100\fscy100\frz0\alpha&H96&\t(4402,4542,\alpha&H00&)}and
+Dialogue: 0,0:02:04.98,0:02:10.65,Cap,,0,0,0,,{\an1\pos(1544.8,990)\fad(120,120)\fnDejaVu Sans\fs50\c&HFFE14B&\b0\i0\fsp1.04\fscx100\fscy100\frz0\alpha&H96&\t(4602,5062,\alpha&H00&)}turned.
+Dialogue: 0,0:02:11.23,0:02:13.33,Cap,,0,0,0,,{\an1\pos(640.1,988.4)\fad(120,120)\fnDejaVu Serif\fs42\c&HC77585&\b0\i0\fsp2.41\fscx100\fscy100\frz0\alpha&H96&\t(0,220,\alpha&H00&)}This
+Dialogue: 0,0:02:11.23,0:02:13.33,Cap,,0,0,0,,{\an1\pos(738.4,988.4)\fad(120,120)\fnDejaVu Serif\fs42\c&HC77585&\b0\i0\fsp1.37\fscx100\fscy100\frz0\alpha&H96&\t(280,600,\alpha&H00&)}business
+Dialogue: 0,0:02:11.23,0:02:13.33,Cap,,0,0,0,,{\an1\pos(918.5,988.4)\fad(120,120)\fnDejaVu Serif\fs42\c&HC77585&\b0\i0\fsp1.2\fscx100\fscy100\frz0\alpha&H96&\t(620,760,\alpha&H00&)}with
+Dialogue: 0,0:02:11.23,0:02:13.33,Cap,,0,0,0,,{\an1\pos(1014.7,988.4)\fad(120,120)\fnDejaVu Serif\fs42\c&HC77585&\b0\i0\fsp1.13\fscx100\fscy100\frz0\alpha&H96&\t(780,900,\alpha&H00&)}the
+Dialogue: 0,0:02:11.23,0:02:13.33,Cap,,0,0,0,,{\an1\pos(1088.5,990)\fad(120,120)\org(1179.1,979.8)\fnDejaVu Serif\fs50\c&HC75A70&\b0\i0\fsp0.03\fscx100\fscy100\frz0\alpha&H96&\t(920,1500,\alpha&H00&)\t(920,1055,\fscy114\fscx94)\t(1055,1190,\fscy89\fscx106)\t(1190,1326,\fscy100\fscx100)}glasses?
+Dialogue: 0,0:02:13.41,0:02:14.91,Cap,,0,0,0,,{\an1\pos(470.7,990)\fad(120,120)\org(522.7,980.2)\fnDejaVu Sans\fs48\c&H53E3FF&\b0\i0\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(0,140,\alpha&H00&)\t(0,72,\fscy130\fscx89)\t(72,160,\fscy100\fscx100)}HOW
+Dialogue: 0,0:02:13.41,0:02:14.91,Cap,,0,0,0,,{\an1\pos(587.8,989.8)\fad(120,120)\fnDejaVu Sans\fs47\c&H59E4FF&\b0\i0\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(160,280,\alpha&H00&)}DO
+Dialogue: 0,0:02:13.41,0:02:14.91,Cap,,0,0,0,,{\an1\pos(663.3,989.8)\fad(120,120)\org(706.1,980.2)\fnDejaVu Sans\fs47\c&H57E4FF&\b0\i0\fsp0.65\fscx100\fscy100\frz0\alpha&H96&\t(220,460,\alpha&H00&)\t(220,306,\fscy82\fscx109)\t(306,412,\fscy100\fscx100)}YOU
+Dialogue: 0,0:02:13.41,0:02:14.91,Cap,,0,0,0,,{\an1\pos(769.7,988.8)\fad(120,120)\fnDejaVu Sans\fs42\c&H74E9FF&\b0\i0\fsp0.97\fscx100\fscy100\frz0\alpha&H96&\t(480,660,\alpha&H00&)}KNOW
+Dialogue: 0,0:02:13.41,0:02:14.91,Cap,,0,0,0,,{\an1\pos(899.5,988.8)\fad(120,120)\fnDejaVu Sans\fs42\c&H74E9FF&\b0\i0\fsp2.05\fscx100\fscy100\frz0\alpha&H96&\t(680,800,\alpha&H00&)}SHE
+Dialogue: 0,0:02:13.41,0:02:14.91,Cap,,0,0,0,,{\an1\pos(989.8,988.8)\fad(120,120)\fnDejaVu Sans\fs42\c&H74E9FF&\b0\i0\fsp1.25\fscx100\fscy100\frz0\alpha&H96&\t(840,1040,\alpha&H00&)}DIDN'T
+Dialogue: 0,0:02:13.41,0:02:14.91,Cap,,0,0,0,,{\an1\pos(1133.6,988.8)\fad(120,120)\fnDejaVu Sans\fs42\c&H74E9FF&\b0\i0\fsp1.47\fscx100\fscy100\frz0\alpha&H96&\t(1080,1220,\alpha&H00&)}HAVE
+Dialogue: 0,0:02:13.41,0:02:14.91,Cap,,0,0,0,,{\an1\pos(1247.7,988.8)\fad(120,120)\fnDejaVu Sans\fs42\c&H74E9FF&\b0\i0\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(1240,1360,\alpha&H00&)}THEM
+Dialogue: 0,0:02:13.41,0:02:14.91,Cap,,0,0,0,,{\an1\pos(1362,988.8)\fad(120,120)\fnDejaVu Sans\fs42\c&H74E9FF&\b0\i0\fsp0.79\fscx100\fscy100\frz0\alpha&H96&\t(1380,1500,\alpha&H00&)}ON!!
+Dialogue: 0,0:02:14.91,0:02:17.97,Cap,,0,0,0,,{\an1\pos(601.6,989.4)\fad(120,120)\fnDejaVu Sans Condensed\fs42\c&H6EA7E5&\b0\i0\fsp1.47\fscx100\fscy100\frz0\alpha&H96&\t(0,180,\alpha&H00&)}THIS
+Dialogue: 0,0:02:14.91,0:02:17.97,Cap,,0,0,0,,{\an1\pos(692,989.4)\fad(120,120)\fnDejaVu Sans Condensed\fs42\c&H6EA7E5&\b0\i0\fsp1.33\fscx100\fscy100\frz0\alpha&H96&\t(220,581,\alpha&H00&)}WOMAN
+Dialogue: 0,0:02:14.91,0:02:17.97,Cap,,0,0,0,,{\an1\pos(840.7,990)\fad(120,120)\fnDejaVu Sans Condensed\fs45\c&H5A9DE5&\b0\i0\fsp0.82\fscx100\fscy100\frz0\alpha&H96&\t(661,1521,\alpha&H00&)}TESTIFIED
+Dialogue: 0,0:02:14.91,0:02:17.97,Cap,,0,0,0,,{\an1\pos(1034.5,989.4)\fad(120,120)\fnDejaVu Sans Condensed\fs42\c&H6EA7E5&\b0\i0\fsp1.47\fscx100\fscy100\frz0\alpha&H96&\t(1561,1681,\alpha&H00&)}IN
+Dialogue: 0,0:02:14.91,0:02:17.97,Cap,,0,0,0,,{\an1\pos(1081.5,989.4)\fad(120,120)\fnDejaVu Sans Condensed\fs42\c&H6EA7E5&\b0\i0\fsp2.53\fscx100\fscy100\frz0\alpha&H96&\t(1741,2041,\alpha&H00&)}OPEN
+Dialogue: 0,0:02:14.91,0:02:17.97,Cap,,0,0,0,,{\an1\pos(1191.6,989.4)\fad(120,120)\fnDejaVu Sans Condensed\fs42\c&H69A4E5&\b0\i0\fsp0.39\fscx100\fscy100\frz0\alpha&H96&\t(2081,2461,\alpha&H00&)}COURT!
+Dialogue: 0,0:02:19.21,0:02:21.45,Cap,,0,0,0,,{\an1\pos(538.1,988.4)\fad(120,120)\fnDejaVu Sans\fs42\c&H75E9FF&\b0\i0\fsp0.36\fscx100\fscy100\frz0\alpha&H96&\t(0,120,\alpha&H00&)}AND
+Dialogue: 0,0:02:19.21,0:02:21.45,Cap,,0,0,0,,{\an1\pos(629.9,988.4)\fad(120,120)\fnDejaVu Sans\fs42\c&H75E9FF&\b0\i0\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(100,220,\alpha&H00&)}WHAT
+Dialogue: 0,0:02:19.21,0:02:21.45,Cap,,0,0,0,,{\an1\pos(747.9,988.4)\fad(120,120)\fnDejaVu Sans\fs42\c&H75E9FF&\b0\i0\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(260,500,\alpha&H00&)}ABOUT
+Dialogue: 0,0:02:19.21,0:02:21.45,Cap,,0,0,0,,{\an1\pos(884.7,988.4)\fad(120,120)\fnDejaVu Sans\fs42\c&H71E8FF&\b0\i0\fsp0.75\fscx100\fscy100\frz0\alpha&H96&\t(540,801,\alpha&H00&)}HEARING
+Dialogue: 0,0:02:19.21,0:02:21.45,Cap,,0,0,0,,{\an1\pos(1066.3,988.4)\fad(120,120)\fnDejaVu Sans\fs42\c&H75E9FF&\b0\i0\fsp1.18\fscx100\fscy100\frz0\alpha&H96&\t(841,961,\alpha&H00&)}THE
+Dialogue: 0,0:02:19.21,0:02:21.45,Cap,,0,0,0,,{\an1\pos(1153.1,988.4)\fad(120,120)\fnDejaVu Sans\fs42\c&H75E9FF&\b0\i0\fsp2.72\fscx100\fscy100\frz0\alpha&H96&\t(981,1201,\alpha&H00&)}KID
+Dialogue: 0,0:02:19.21,0:02:21.45,Cap,,0,0,0,,{\an1\pos(1234.6,990)\fad(120,120)\org(1305.2,979.8)\fnDejaVu Sans\fs50\c&H4AE2FF&\b0\i0\fsp0.98\fscx100\fscy100\frz0\alpha&H96&\t(1221,1641,\alpha&H00&)\t(1221,1333,\fscy111\fscx95)\t(1333,1445,\fscy91\fscx104)\t(1445,1557,\fscy100\fscx100)}YELL!!
+Dialogue: 0,0:02:21.69,0:02:22.69,Cap,,0,0,0,,{\an1\pos(911.2,990)\fad(120,120)\fnDejaVu Serif\fs42\c&HCB8787&\b0\i0\fsp0.14\fscx100\fscy100\frz0\alpha&H96&\t(0,320,\alpha&H00&)}Huh?
+Dialogue: 0,0:02:23.27,0:02:26.25,Cap,,0,0,0,,{\an1\pos(506.2,988.4)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&H76A5E3&\b0\i0\fsp3.71\fscx100\fscy100\frz0\alpha&H96&\t(0,160,\alpha&H00&)}I'M
+Dialogue: 0,0:02:23.27,0:02:26.25,Cap,,0,0,0,,{\an1\pos(572.6,988.4)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&H76A5E3&\b0\i0\fsp2.81\fscx100\fscy100\frz0\alpha&H96&\t(220,520,\alpha&H00&)}TELLING
+Dialogue: 0,0:02:23.27,0:02:26.25,Cap,,0,0,0,,{\an1\pos(734.3,988.4)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&H76A5E3&\b0\i0\fsp1.96\fscx100\fscy100\frz0\alpha&H96&\t(540,680,\alpha&H00&)}YOU,
+Dialogue: 0,0:02:23.27,0:02:26.25,Cap,,0,0,0,,{\an1\pos(827.6,988.4)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&H76A5E3&\b0\i0\fsp2.22\fscx100\fscy100\frz0\alpha&H96&\t(700,840,\alpha&H00&)}I'VE
+Dialogue: 0,0:02:23.27,0:02:26.25,Cap,,0,0,0,,{\an1\pos(906.1,988.4)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&H76A5E3&\b0\i0\fsp2.32\fscx100\fscy100\frz0\alpha&H96&\t(880,1040,\alpha&H00&)}GOT
+Dialogue: 0,0:02:23.27,0:02:26.25,Cap,,0,0,0,,{\an1\pos(991.8,988.4)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&H76A5E3&\b0\i0\fsp2.37\fscx100\fscy100\frz0\alpha&H96&\t(1120,1260,\alpha&H00&)}ALL
+Dialogue: 0,0:02:23.27,0:02:26.25,Cap,,0,0,0,,{\an1\pos(1065.8,988.4)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&H76A5E3&\b0\i0\fsp1.9\fscx100\fscy100\frz0\alpha&H96&\t(1280,1400,\alpha&H00&)}THE
+Dialogue: 0,0:02:23.27,0:02:26.25,Cap,,0,0,0,,{\an1\pos(1144.6,988.8)\fad(120,120)\fnDejaVu Sans Condensed\fs43\c&H639AE3&\b0\i0\fsp2.69\fscx100\fscy100\frz0\alpha&H96&\t(1521,1901,\alpha&H00&)}FACTS
+Dialogue: 0,0:02:23.27,0:02:26.25,Cap,,0,0,0,,{\an1\pos(1270.8,990)\fad(120,120)\org(1336.9,980)\fnDejaVu Sans Condensed\fs49\c&H4B8CE3&\b0\i0\fsp2.95\fscx100\fscy100\frz0\alpha&H96&\t(1981,2381,\alpha&H00&)\t(1981,2125,\fscy84\fscx108)\t(2125,2301,\fscy100\fscx100)}HERE!
+Dialogue: 0,0:02:27.51,0:02:32.43,Cap,,0,0,0,,{\an1\pos(801.5,990)\fad(120,120)\fnDejaVu Sans\fs41\c&HFFEA7E&\b0\i0\fsp4.8\fscx100\fscy100\frz0\alpha&H96&\t(0,1641,\alpha&H00&)}Well,
+Dialogue: 0,0:02:27.51,0:02:32.43,Cap,,0,0,0,,{\an1\pos(961.7,990)\fad(120,120)\fnDejaVu Sans\fs41\c&HFFE97C&\b0\i0\fsp1.13\fscx100\fscy100\frz0\alpha&H96&\t(4243,4703,\alpha&H00&)}that's
+Dialogue: 0,0:02:27.51,0:02:32.43,Cap,,0,0,0,,{\an1\pos(1079,990)\fad(120,120)\fnDejaVu Sans\fs41\c&HFFEA7E&\b0\i0\fsp1.6\fscx100\fscy100\frz0\alpha&H96&\t(4763,4904,\alpha&H00&)}it.
+Dialogue: 0,0:02:32.43,0:02:34.01,Cap,,0,0,0,,{\an1\pos(743.9,989.8)\fad(120,120)\fnDejaVu Serif\fs41\c&HC77787&\b0\i0\fsp1.94\fscx100\fscy100\frz0\alpha&H96&\t(0,260,\alpha&H00&)}That's
+Dialogue: 0,0:02:32.43,0:02:34.01,Cap,,0,0,0,,{\an1\pos(875.6,989.8)\fad(120,120)\fnDejaVu Serif\fs41\c&HC77787&\b0\i0\fsp0.63\fscx100\fscy100\frz0\alpha&H96&\t(280,400,\alpha&H00&)}the
+Dialogue: 0,0:02:32.43,0:02:34.01,Cap,,0,0,0,,{\an1\pos(946.2,990)\fad(120,120)\fnDejaVu Serif\fs42\c&HC77384&\b0\i0\fsp0.72\fscx100\fscy100\frz0\alpha&H96&\t(420,580,\alpha&H00&)}whole
+Dialogue: 0,0:02:32.43,0:02:34.01,Cap,,0,0,0,,{\an1\pos(1069.7,989.8)\fad(120,120)\fnDejaVu Serif\fs41\c&HC77787&\b0\i0\fsp3.14\fscx100\fscy100\frz0\alpha&H96&\t(640,980,\alpha&H00&)}case.
+Dialogue: 0,0:02:41.50,0:02:42.50,Cap,,0,0,0,,{\an1\pos(909.5,990)\fad(120,120)\fnDejaVu Serif\fs41\c&HCC8C89&\b0\i0\fsp1.12\fscx100\fscy100\frz0\alpha&H96&\t(0,380,\alpha&H00&)}Well?
+Dialogue: 0,0:02:45.42,0:02:46.84,Cap,,0,0,0,,{\an1\pos(810.8,990)\fad(120,120)\fnDejaVu Sans Condensed\fs42\c&H6363CC&\b0\i0\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(0,320,\alpha&H00&)}SAY
+Dialogue: 0,0:02:45.42,0:02:46.84,Cap,,0,0,0,,{\an1\pos(881.5,990)\fad(120,120)\fnDejaVu Sans Condensed\fs42\c&H6464CC&\b0\i0\fsp1.73\fscx100\fscy100\frz0\alpha&H96&\t(340,820,\alpha&H00&)}SOMETHING!
+Dialogue: 0,0:02:52.59,0:02:56.11,Cap,,0,0,0,,{\an1\pos(619.9,990)\fad(120,120)\fnLiberation Serif\fs44\c&HE5BD79&\b0\i0\fsp5.86\fscx100\fscy100\frz0\alpha&H96&\t(0,280,\alpha&H00&)}You
+Dialogue: 0,0:02:52.59,0:02:56.11,Cap,,0,0,0,,{\an1\pos(711.8,990)\fad(120,120)\fnLiberation Serif\fs44\c&HE5BE7A&\b0\i0\fsp5.85\fscx100\fscy100\frz0\alpha&H96&\t(520,1161,\alpha&H00&)}lousy
+Dialogue: 0,0:02:52.59,0:02:56.11,Cap,,0,0,0,,{\an1\pos(837,989.2)\fad(120,120)\fnLiberation Serif\fs40\c&HE5C690&\b0\i0\fsp5.26\fscx100\fscy100\frz0\alpha&H96&\t(1321,1721,\alpha&H00&)}bunch
+Dialogue: 0,0:02:52.59,0:02:56.11,Cap,,0,0,0,,{\an1\pos(960.5,989.2)\fad(120,120)\fnLiberation Serif\fs40\c&HE5C690&\b0\i0\fsp4.78\fscx100\fscy100\frz0\alpha&H96&\t(1761,1881,\alpha&H00&)}of
+Dialogue: 0,0:02:52.59,0:02:56.11,Cap,,0,0,0,,{\an1\pos(1009.2,989.2)\fad(120,120)\fnLiberation Serif\fs40\c&HE5C690&\b0\i0\fsp4.5\fscx100\fscy100\frz0\alpha&H96&\t(1921,2402,\alpha&H00&)}bleeding
+Dialogue: 0,0:02:52.59,0:02:56.11,Cap,,0,0,0,,{\an1\pos(1178.5,989.2)\fad(120,120)\fnLiberation Serif\fs40\c&HE5C690&\b0\i0\fsp3.78\fscx100\fscy100\frz0\alpha&H96&\t(2602,2922,\alpha&H00&)}hearts.
+Dialogue: 0,0:02:56.75,0:03:01.33,Cap,,0,0,0,,{\an1\pos(189.1,987.6)\fad(120,120)\fnLiberation Mono\fs40\c&H82B899&\b0\i1\fsp2.23\fscx100\fscy100\frz0\alpha&H96&\t(0,200,\alpha&H00&)}You're
+Dialogue: 0,0:02:56.75,0:03:01.33,Cap,,0,0,0,,{\an1\pos(350.2,987.6)\fad(120,120)\fnLiberation Mono\fs40\c&H82B899&\b0\i1\fsp4.63\fscx100\fscy100\frz0\alpha&H96&\t(240,421,\alpha&H00&)}not
+Dialogue: 0,0:02:56.75,0:03:01.33,Cap,,0,0,0,,{\an1\pos(448.5,987.6)\fad(120,120)\fnLiberation Mono\fs40\c&H82B899&\b0\i1\fsp2.78\fscx100\fscy100\frz0\alpha&H96&\t(521,741,\alpha&H00&)}going
+Dialogue: 0,0:02:56.75,0:03:01.33,Cap,,0,0,0,,{\an1\pos(589,987.6)\fad(120,120)\fnLiberation Mono\fs40\c&H82B899&\b0\i1\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(761,881,\alpha&H00&)}to
+Dialogue: 0,0:02:56.75,0:03:01.33,Cap,,0,0,0,,{\an1\pos(652.3,987.6)\fad(120,120)\fnLiberation Mono\fs40\c&H82B899&\b0\i1\fsp4.6\fscx100\fscy100\frz0\alpha&H96&\t(862,1603,\alpha&H00&)}intimidate
+Dialogue: 0,0:02:56.75,0:03:01.33,Cap,,0,0,0,,{\an1\pos(930.5,987.6)\fad(120,120)\fnLiberation Mono\fs40\c&H82B899&\b0\i1\fsp4.05\fscx100\fscy100\frz0\alpha&H96&\t(1663,1883,\alpha&H00&)}me,
+Dialogue: 0,0:02:56.75,0:03:01.33,Cap,,0,0,0,,{\an1\pos(1027,987.6)\fad(120,120)\fnLiberation Mono\fs40\c&H82B899&\b0\i1\fsp2.52\fscx100\fscy100\frz0\alpha&H96&\t(2023,2164,\alpha&H00&)}I'm
+Dialogue: 0,0:02:56.75,0:03:01.33,Cap,,0,0,0,,{\an1\pos(1119,987.6)\fad(120,120)\fnLiberation Mono\fs40\c&H82B899&\b0\i1\fsp4.26\fscx100\fscy100\frz0\alpha&H96&\t(2224,3005,\alpha&H00&)}entitled
+Dialogue: 0,0:02:56.75,0:03:01.33,Cap,,0,0,0,,{\an1\pos(1343,987.6)\fad(120,120)\fnLiberation Mono\fs40\c&H82B899&\b0\i1\fsp3.01\fscx100\fscy100\frz0\alpha&H96&\t(3045,3165,\alpha&H00&)}to
+Dialogue: 0,0:02:56.75,0:03:01.33,Cap,,0,0,0,,{\an1\pos(1412.3,987.6)\fad(120,120)\fnLiberation Mono\fs40\c&H82B899&\b0\i1\fsp4.11\fscx100\fscy100\frz0\alpha&H96&\t(3185,3366,\alpha&H00&)}my
+Dialogue: 0,0:02:56.75,0:03:01.33,Cap,,0,0,0,,{\an1\pos(1483.9,990)\fad(120,120)\fnLiberation Mono\fs49\c&H6AB88C&\b0\i1\fsp5.03\fscx100\fscy100\frz0\alpha&H96&\t(3426,3987,\alpha&H00&)}opinion.
+Dialogue: 0,0:03:04.62,0:03:08.75,Cap,,0,0,0,,{\an1\pos(534,987.6)\fad(120,120)\fnDejaVu Sans\fs40\c&HFFEA82&\b0\i0\fsp4.18\fscx100\fscy100\frz0\alpha&H96&\t(0,421,\alpha&H00&)}Brought
+Dialogue: 0,0:03:04.62,0:03:08.75,Cap,,0,0,0,,{\an1\pos(710.7,987.6)\fad(120,120)\fnDejaVu Sans\fs40\c&HFFEA82&\b0\i0\fsp5.81\fscx100\fscy100\frz0\alpha&H96&\t(481,701,\alpha&H00&)}me
+Dialogue: 0,0:03:04.62,0:03:08.75,Cap,,0,0,0,,{\an1\pos(787.7,987.6)\fad(120,120)\fnDejaVu Sans\fs40\c&HFFEA82&\b0\i0\fsp4.88\fscx100\fscy100\frz0\alpha&H96&\t(882,1282,\alpha&H00&)}kids,
+Dialogue: 0,0:03:04.62,0:03:08.75,Cap,,0,0,0,,{\an1\pos(902.9,987.6)\fad(120,120)\fnDejaVu Sans\fs40\c&HFFEA82&\b0\i0\fsp5.13\fscx100\fscy100\frz0\alpha&H96&\t(1322,1603,\alpha&H00&)}you
+Dialogue: 0,0:03:04.62,0:03:08.75,Cap,,0,0,0,,{\an1\pos(992.2,987.6)\fad(120,120)\fnDejaVu Sans\fs40\c&HFFEA82&\b0\i0\fsp3.9\fscx100\fscy100\frz0\alpha&H96&\t(1763,2184,\alpha&H00&)}work
+Dialogue: 0,0:03:04.62,0:03:08.75,Cap,,0,0,0,,{\an1\pos(1101.7,987.6)\fad(120,120)\fnDejaVu Sans\fs40\c&HFFEA82&\b0\i0\fsp4.37\fscx100\fscy100\frz0\alpha&H96&\t(2244,2585,\alpha&H00&)}your
+Dialogue: 0,0:03:04.62,0:03:08.75,Cap,,0,0,0,,{\an1\pos(1207.2,990)\fad(120,120)\fnDejaVu Sans\fs52\c&HFFDF41&\b1\i0\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(2725,3105,\alpha&H00&)}life
+Dialogue: 0,0:03:04.62,0:03:08.75,Cap,,0,0,0,,{\an1\pos(1302.9,987.6)\fad(120,120)\fnDejaVu Sans\fs40\c&HFFEA82&\b0\i0\fsp4.01\fscx100\fscy100\frz0\alpha&H96&\t(3266,3526,\alpha&H00&)}out.
+Dialogue: 0,0:03:26.39,0:03:27.63,Cap,,0,0,0,,{\an1\pos(870.3,990)\fad(120,120)\fnLiberation Serif\fs40\c&H9A9B82&\b0\i0\fsp5.27\fscx100\fscy100\frz0\alpha&H96&\t(0,341,\alpha&H00&)}I'm
+Dialogue: 0,0:03:26.39,0:03:27.63,Cap,,0,0,0,,{\an1\pos(941.7,990)\fad(120,120)\fnLiberation Serif\fs40\c&H9A9B83&\b0\i0\fsp2.45\fscx100\fscy100\frz0\alpha&H96&\t(381,641,\alpha&H00&)}guilty.
+Dialogue: 0,0:03:31.24,0:03:32.70,Cap,,0,0,0,,{\an1\pos(853.3,990)\fad(120,120)\fnDejaVu Serif\fs40\c&HDFAC87&\b0\i0\fsp2.37\fscx100\fscy100\frz0\alpha&H96&\t(0,140,\alpha&H00&)}I'm
+Dialogue: 0,0:03:31.24,0:03:32.70,Cap,,0,0,0,,{\an1\pos(926.8,990)\fad(120,120)\fnDejaVu Serif\fs40\c&HDFAC87&\b0\i0\fsp4.91\fscx100\fscy100\frz0\alpha&H96&\t(180,862,\alpha&H00&)}guilty.
