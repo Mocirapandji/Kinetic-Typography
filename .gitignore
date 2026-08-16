@@ -20,3 +20,5 @@ parselmouth
 __pycache__/
 *.pyc
 rendered_output/
+outputs/
+evaluationoutput/

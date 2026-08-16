@@ -1,8 +1,0 @@
-source,stem,status,normalised_src,unique,plain,n_segments,n_words,emotions
-12AngryMenTest.mp4,12AngryMenTest,ok,,evaluationoutput/video/12AngryMenTestv18_withUniqueSubtitles.mp4,evaluationoutput/video/12AngryMenTestv18_withoutUniqueSubtitles.mp4,48.0,339.0,"neutral:15, excited:14, frustrated:7, angry:5, sad:4, surprised:2, happy:1"
-BreakingBad(Happy).mp4,BreakingBad_Happy,failed: KeyError,,,,,,
-GreenBook(Stressed).mp4,GreenBook_Stressed,ok,outputs/normalised/GreenBook(Stressed)_norm.mp4,evaluationoutput/video/GreenBook_Stressedv18_withUniqueSubtitles.mp4,evaluationoutput/video/GreenBook_Stressedv18_withoutUniqueSubtitles.mp4,5.0,88.0,"frustrated:4, neutral:1"
-Obsession(fear).mp4,Obsession_fear,ok,outputs/normalised/Obsession(fear)_norm.mp4,evaluationoutput/video/Obsession_fearv18_withUniqueSubtitles.mp4,evaluationoutput/video/Obsession_fearv18_withoutUniqueSubtitles.mp4,3.0,10.0,"excited:1, fearful:1, angry:1"
-RDR2(sad).mp4,RDR2_sad,ok,,evaluationoutput/video/RDR2_sadv18_withUniqueSubtitles.mp4,evaluationoutput/video/RDR2_sadv18_withoutUniqueSubtitles.mp4,68.0,332.0,"frustrated:17, sad:17, excited:12, neutral:11, angry:5, surprised:3, fearful:2, happy:1"
-TheMentalist(Threathen).mp4,TheMentalist_Threathen,ok,outputs/normalised/TheMentalist(Threathen)_norm.mp4,evaluationoutput/video/TheMentalist_Threathenv18_withUniqueSubtitles.mp4,evaluationoutput/video/TheMentalist_Threathenv18_withoutUniqueSubtitles.mp4,5.0,114.0,"sad:4, neutral:1"
-TWD(Angry).mp4,TWD_Angry,ok,outputs/normalised/TWD(Angry)_norm.mp4,evaluationoutput/video/TWD_Angryv18_withUniqueSubtitles.mp4,evaluationoutput/video/TWD_Angryv18_withoutUniqueSubtitles.mp4,5.0,24.0,"sad:3, angry:1, frustrated:1"
