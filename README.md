@@ -1,4 +1,4 @@
-cat > README.md << 'EOF'
+
 # Emotion-Responsive Kinetic Typography
 *A Prosody-Driven Captioning Pipeline for Accessibility*
 
