@@ -6,10 +6,37 @@ app = marimo.App(width="full")
 
 @app.cell
 def _():
-    # =====================================================================
-    # CELL 0 — IMPORTS (all imports live here, marimo convention)
-    # =====================================================================
     import marimo as mo
+
+    return (mo,)
+
+
+@app.cell
+def _(mo):
+    mo.md("""
+    # train_emotionsV3 — IEMOCAP primary, RAVDESS supporting
+
+    Trains the emotion classifier the transcriber loads. IEMOCAP sets the label
+    space and RAVDESS only fills classes IEMOCAP already has, entering at a
+    reduced sample weight. Evaluation is IEMOCAP-only, leave-one-session-out,
+    so RAVDESS never sits in a test fold.
+
+    Output is `outputs/clf_v3.joblib`.
+    """)
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md("""
+    ## Cell 0 — Imports
+    """)
+    return
+
+
+@app.cell
+def _():
+
     import os
     import re
     import time
@@ -39,7 +66,6 @@ def _():
         confusion_matrix,
         f1_score,
         joblib,
-        mo,
         np,
         opensmile,
         os,
@@ -53,43 +79,21 @@ def _():
 @app.cell
 def _(mo):
     mo.md("""
-    # train_emotionsV3 — IEMOCAP primary, RAVDESS supporting
+    ## Cell 1 — Configuration
 
-    Replaces `train_emotion.py`, which trained on RAVDESS only (46.8%
-    speaker-independent against a 14.3% chance line). V8 and V17 both test on
-    IEMOCAP without ever training on it. V8's config has a commented-out
-    `features_combined.csv` switch for a combined model that was never written.
-
-    ## Rules
-
-    IEMOCAP sets the label space. RAVDESS can only fill classes IEMOCAP already
-    has. The target domain is conversational speech, so IEMOCAP is the
-    reference and RAVDESS is extra data.
-
-    - RAVDESS classes with no IEMOCAP counterpart get dropped, not remapped.
-      `calm` is the main one. Folding it into `neutral` would change what
-      `neutral` means, and `neutral` is IEMOCAP's biggest class.
-    - RAVDESS rows are down-weighted at fit time (`RAVDESS_WEIGHT`).
-    - Evaluation is IEMOCAP-only, leave-one-session-out. RAVDESS never goes
-      into a test fold. Pooled accuracy would hide a model that improved on
-      acted speech and not on conversation.
-    - CELL 10 trains both IEMOCAP-only and IEMOCAP+RAVDESS on the same folds,
-      so you can check whether RAVDESS actually helped.
-
-    ## Output
-
-    `outputs/clf_v3.joblib`, in the 4-key bundle format V17's CELL 6 already
-    loads (`clf` / `feature_cols` / `extractor` / `speaker_normalised`), plus
-    metadata keys V17 ignores.
+    Every setting the notebook depends on lives here, so nothing important is
+    buried further down. It sets where the two datasets sit on disk, which
+    feature extractor to use, how features get normalised, the weight RAVDESS
+    enters training at, and the Random Forest settings. It also builds the cache
+    filenames per extractor, so switching extractor cannot silently reuse the
+    wrong cached features. Change a value here and everything below re-runs
+    against it.
     """)
     return
 
 
 @app.cell
 def _(os):
-    # =====================================================================
-    # CELL 1 — CONFIG
-    # =====================================================================
     ravdess_dir = "/run/media/s5812886/T7 Shield/RAVDESS"
     iemocap_dir = "/run/media/s5812886/T7 Shield/IEMOCAP_full_release"
 
@@ -97,66 +101,38 @@ def _(os):
     os.makedirs(OUT_DIR, exist_ok=True)
     os.makedirs(f"{OUT_DIR}/audio", exist_ok=True)
 
-    # ---------------- EXTRACTOR ----------------
-    # "egemaps" -> 88-dim eGeMAPSv02 functionals, what V17's clf_v2 expects
-    # "praat14" -> the 14 Praat features from V8 CELL 4
-    # Has to match what the consuming notebook extracts at inference, or the
-    # vector it builds won't line up with the one fitted here.
+    # "egemaps" = 88-dim eGeMAPSv02 functionals. "praat14" = the older
+    # 14-feature Praat set. Must match what the transcriber extracts.
     EXTRACTOR = "egemaps"
 
-    # ---------------- SPEAKER NORMALISATION ----------------
-    # V17 normalises at inference by z-scoring across all segments of one clip
-    # (predict_segment_emotions_v9). The training-time equivalent is per-dialog:
-    # one IEMOCAP dialog is the structural match for one video handed to
-    # process_any_video.
-    #   "dialog"         group by dialog, both speakers pooled. Closest to what
-    #                    V17 does. Default.
-    #   "dialog_speaker" group by (dialog, speaker). Cleaner stats, but tighter
-    #                    than inference can reproduce with diarisation off.
-    #   "speaker"        group by speaker across the corpus. Best stats,
-    #                    furthest from inference.
-    #   "off"            no normalisation. Sets speaker_normalised=False so V17
-    #                    skips its own step too.
+    # Grouping used to z-score features. "dialog" is closest to inference,
+    # where the transcriber z-scores across all segments of one clip.
     NORM_SCOPE = "dialog"
     NORM_MIN_ROWS = 4          # groups smaller than this are left raw
     NORM_STD_FLOOR = 1e-6      # guards divide-by-zero on a constant feature
 
-    # ---------------- SUPPORT-SET WEIGHTING ----------------
-    # Weight on every RAVDESS row at fit time. 1.0 means a RAVDESS clip counts
-    # as much as an IEMOCAP one; 0.0 excludes RAVDESS (same as the IEMOCAP-only
-    # ablation). 0.3 is a starting guess. CELL 10 sweeps it so you can pick
-    # from the fold numbers instead.
-    #
-    # Sweep widened around 0.0-0.3, where the coarse pass (0.0/0.15/0.3/0.5/1.0)
-    # showed every fold improving at 0.15 and session 5 starting to regress by
-    # 0.3. CELL 10b picks from this sweep by worst-case fold, not pooled argmax.
+    # Weight on every RAVDESS row at fit time. 0.0 excludes RAVDESS entirely.
+    # Chosen from the sweep in Cell 10 / Cell 11.
     RAVDESS_WEIGHT = 0.20
     RAVDESS_WEIGHT_SWEEP = [
         0.0, 0.05, 0.08, 0.10, 0.12, 0.13, 0.14, 0.15, 0.16, 0.17, 0.18,
         0.19, 0.20, 0.22, 0.25, 0.28, 0.30,
     ]
 
-    # ---------------- LABEL-SPACE OPTIONS ----------------
-    # IEMOCAP's exc (excited) has no RAVDESS counterpart. A lot of published
-    # IEMOCAP work merges exc into hap because annotators confused the two.
-    # Merging gives a bigger happy class that RAVDESS can support; keeping them
-    # separate preserves a distinction this pipeline could render differently.
+    # IEMOCAP's excited has no RAVDESS counterpart. Merging it into happy
+    # gives a bigger class; keeping it separate preserves a distinction the
+    # pipeline can render.
     MERGE_EXCITED_INTO_HAPPY = False
 
-    # Drop IEMOCAP classes below this count. fea/sur/dis are rare enough in
-    # IEMOCAP that without RAVDESS they're barely learnable, and with it they
-    # become mostly-acted classes. Counts print either way.
+    # Drop IEMOCAP classes below this count.
     MIN_CLASS_COUNT = 40
 
-    # ---------------- CACHING ----------------
-    # Extraction over ~10k utterances is the slow part. Cached per extractor so
-    # switching EXTRACTOR doesn't reuse the wrong cache.
+    # Extraction is the slow step, so it is cached per extractor.
     iemocap_feat_csv = f"{OUT_DIR}/features_iemocap_{EXTRACTOR}.csv"
     ravdess_feat_csv = f"{OUT_DIR}/features_ravdess_{EXTRACTOR}.csv"
     combined_csv = f"{OUT_DIR}/features_combined_{EXTRACTOR}.csv"
 
-    # Existing V8/V17 IEMOCAP CSV, if present. Used for labels only; its
-    # feature columns are praat14 and get ignored.
+    # Fallback source for IEMOCAP labels only; its feature columns are ignored.
     iemocap_label_csv = f"{OUT_DIR}/features_iemocap.csv"
     if not os.path.exists(iemocap_label_csv):
         iemocap_label_csv = ("/run/media/s5812886/T7 Shield/kinetic_outputs/"
@@ -193,13 +169,22 @@ def _(os):
 
 
 @app.cell
+def _(mo):
+    mo.md("""
+    ## Cell 2 — Label harmonisation
+
+    Writes out both datasets' emotion codes and what each one becomes, rather
+    than inferring it at runtime. IEMOCAP's vocabulary is the reference, so
+    RAVDESS labels are translated into it. RAVDESS's "calm" maps to nothing
+    because IEMOCAP has no equivalent, so those clips are dropped rather than
+    folded into neutral, which would change what neutral means. The cell prints
+    the resulting label space and flags which classes RAVDESS can support.
+    """)
+    return
+
+
+@app.cell
 def _():
-    # =====================================================================
-    # CELL 2 — LABEL HARMONISATION
-    # Both mappings written out rather than inferred at runtime.
-    # =====================================================================
-    # IEMOCAP's 3-letter codes -> canonical names. This is the label space;
-    # nothing downstream adds to it.
     IEMOCAP_CODE_TO_LABEL = {
         "neu": "neutral",
         "hap": "happy",
@@ -210,12 +195,10 @@ def _():
         "fea": "fearful",
         "sur": "surprised",
         "dis": "disgust",
-        # "oth" (other) and "xxx" (no annotator agreement) are left out. An
-        # utterance the annotators couldn't agree on is a noisy label.
+        # "oth" and "xxx" (no annotator agreement) are left out.
     }
 
-    # RAVDESS filename digit -> canonical name, using IEMOCAP's vocabulary.
-    # None means no IEMOCAP counterpart, so drop the clip.
+    # RAVDESS filename digit -> canonical name. None means drop the clip.
     RAVDESS_DIGIT_TO_LABEL = {
         "01": "neutral",
         "02": None,        # calm. IEMOCAP has no such category.
@@ -227,9 +210,6 @@ def _():
         "08": "surprised",
     }
 
-    # In both corpora : neutral, happy, sad, angry, fearful, disgust, surprised
-    # IEMOCAP only    : frustrated, excited (learned from IEMOCAP alone)
-    # RAVDESS only    : calm (dropped)
     RAVDESS_ONLY_DROPPED = {"calm"}
 
     print("canonical label space (from IEMOCAP):")
@@ -244,12 +224,22 @@ def _():
 
 
 @app.cell
+def _(mo):
+    mo.md("""
+    ## Cell 3 — Feature extractors
+
+    Turns one audio file into one row of numbers. In eGeMAPS mode openSMILE
+    produces the 88 standard values the shipped model uses; the praat14 path is
+    the older hand-picked set, kept so models trained earlier stay comparable.
+    `extract_features` is the single entry point, so nothing below needs to know
+    which mode is on. It is built with the same call the transcriber uses at
+    inference, so the feature columns line up at prediction time.
+    """)
+    return
+
+
+@app.cell
 def _(EXTRACTOR, HAVE_OPENSMILE, call, np, opensmile, parselmouth):
-    # =====================================================================
-    # CELL 3 — FEATURE EXTRACTORS
-    # praat14 is copied from TranscriberV8 CELL 4 unchanged, so a praat14
-    # model trained here is comparable with the old one.
-    # =====================================================================
     def extract_clip_features_from_sound(snd):
         dur = snd.get_total_duration()
 
@@ -292,8 +282,8 @@ def _(EXTRACTOR, HAVE_OPENSMILE, call, np, opensmile, parselmouth):
             "hnr_mean": hnr_mean, "hnr_std": hnr_std,
         }
 
-    # Same eGeMAPSv02 / Functionals construction as V17 CELL 7, so the column
-    # names match and feature_cols lines up at inference.
+    # Same eGeMAPSv02 / Functionals construction the transcriber uses, so the
+    # column names match.
     if EXTRACTOR == "egemaps":
         if not HAVE_OPENSMILE:
             raise RuntimeError(
@@ -320,14 +310,33 @@ def _(EXTRACTOR, HAVE_OPENSMILE, call, np, opensmile, parselmouth):
 
 
 @app.cell
-def _(IEMOCAP_CODE_TO_LABEL, Path, iemocap_dir, iemocap_label_csv, os, pd, re):
-    # =====================================================================
-    # CELL 4 — IEMOCAP LABEL INDEX
-    # Two sources, in order:
-    #  1. The EmoEvaluation .txt files inside IEMOCAP_full_release. This is
-    #     what extract_iemocap.py was presumably wrapping.
-    #  2. features_iemocap.csv, if the release isn't mounted. Labels only.
-    # =====================================================================
+def _(mo):
+    mo.md("""
+    ## Cell 4 — Dataset indexing
+
+    Builds the list of clips to work from before any audio is read. For IEMOCAP
+    it reads the EmoEvaluation text files and produces one row per utterance
+    with its label, speaker, dialogue and session, falling back to an existing
+    CSV for labels if the drive is not mounted. For RAVDESS it parses the
+    filename instead, keeping only speech and dropping the song half and calm.
+    Rows whose wav is missing on disk are dropped and counted, and both label
+    distributions are printed.
+    """)
+    return
+
+
+@app.cell
+def _(
+    IEMOCAP_CODE_TO_LABEL,
+    Path,
+    RAVDESS_DIGIT_TO_LABEL,
+    iemocap_dir,
+    iemocap_label_csv,
+    os,
+    pd,
+    ravdess_dir,
+    re,
+):
     EMO_LINE_RE = re.compile(
         r"^\[(?P<start>\d+\.\d+)\s*-\s*(?P<end>\d+\.\d+)\]\s+"
         r"(?P<utt>\S+)\s+(?P<code>\S+)\s+\["
@@ -338,9 +347,7 @@ def _(IEMOCAP_CODE_TO_LABEL, Path, iemocap_dir, iemocap_label_csv, os, pd, re):
 
         The trailing field of an utterance id ('..._F012' / '..._M042') gives
         the turn's speaker. The 'F' in the session prefix ('Ses01F') only says
-        whose script the dialog followed, so it isn't the speaker. Using it
-        halves the apparent speaker count and lets the same voice land in both
-        train and test.
+        whose script the dialog followed, so it isn't the speaker.
         """
         sess = utt_id[3:5]
         tail = utt_id.rsplit("_", 1)[-1]
@@ -428,18 +435,9 @@ def _(IEMOCAP_CODE_TO_LABEL, Path, iemocap_dir, iemocap_label_csv, os, pd, re):
     iem_index = iem_index[_exists].reset_index(drop=True)
     print(f"  speakers: {sorted(iem_index['speaker'].unique())}")
     print(iem_index["label"].value_counts().to_string())
-    return (iem_index,)
 
-
-@app.cell
-def _(Path, RAVDESS_DIGIT_TO_LABEL, os, pd, ravdess_dir):
-    # =====================================================================
-    # CELL 5 — RAVDESS INDEX (overlapping classes only)
     # Filename: modality-vocal-emotion-intensity-statement-repetition-actor
     # e.g. 03-01-06-01-02-01-12.wav -> emotion 06 (fearful), actor 12.
-    # Speech only (vocal channel 01). The song half is a different production
-    # style and isn't what this pipeline captions.
-    # =====================================================================
     def build_ravdess_index(root):
         rows, dropped = [], {}
         wavs = sorted(Path(root).glob("Actor_*/*.wav"))
@@ -464,8 +462,8 @@ def _(Path, RAVDESS_DIGIT_TO_LABEL, os, pd, ravdess_dir):
                 "path": str(p),
                 "label": label,
                 "raw_code": parts[2],
-                # RAVDESS actors are the speakers, and there are no dialogs, so
-                # the actor doubles as the normalisation group (CELL 8).
+                # RAVDESS has no dialogs, so the actor doubles as the
+                # normalisation group.
                 "speaker": f"RAV{actor:02d}",
                 "dialog": f"RAV{actor:02d}",
                 "session": 0,
@@ -488,18 +486,36 @@ def _(Path, RAVDESS_DIGIT_TO_LABEL, os, pd, ravdess_dir):
                      "dialog", "session", "source"])
         print(f"RAVDESS not found at {ravdess_dir}, continuing IEMOCAP-only. "
               f"Everything below still runs, the support set is just empty.")
-    return (rav_index,)
+    return iem_index, rav_index
 
 
 @app.cell
-def _(extract_features, os, pd, time):
-    # =====================================================================
-    # CELL 6 — FEATURE EXTRACTION WITH CACHE
-    # The only slow step (~10k IEMOCAP utterances + ~1.4k RAVDESS speech
-    # clips). Cached to CSV keyed by extractor. A clip whose extraction throws
-    # is dropped and counted, not written as zeros: a row of zeros looks like a
-    # plausible feature vector with no signal in it.
-    # =====================================================================
+def _(mo):
+    mo.md("""
+    ## Cell 5 — Feature extraction with cache
+
+    This is the slow step, roughly ten thousand IEMOCAP utterances plus around
+    fourteen hundred RAVDESS clips, so results are written to CSV and reused on
+    every later run. The cell walks each index, extracts features per clip,
+    carries the label columns along beside them, and prints progress as it goes.
+    A clip whose extraction throws is dropped and counted rather than written as
+    zeros, because a row of zeros looks like a plausible feature vector with no
+    signal in it.
+    """)
+    return
+
+
+@app.cell
+def _(
+    extract_features,
+    iem_index,
+    iemocap_feat_csv,
+    os,
+    pd,
+    rav_index,
+    ravdess_feat_csv,
+    time,
+):
     def extract_for_index(index_df, cache_csv, tag):
         if os.path.exists(cache_csv):
             cached = pd.read_csv(cache_csv)
@@ -532,24 +548,26 @@ def _(extract_features, os, pd, time):
               f"failed {failed}. Cached -> {cache_csv}")
         return out
 
-    return (extract_for_index,)
-
-
-@app.cell
-def _(
-    extract_for_index,
-    iem_index,
-    iemocap_feat_csv,
-    rav_index,
-    ravdess_feat_csv,
-):
-    # =====================================================================
-    # CELL 6b — RUN EXTRACTION
-    # =====================================================================
     iem_feats = extract_for_index(iem_index, iemocap_feat_csv, "iemocap")
     rav_feats = extract_for_index(rav_index, ravdess_feat_csv, "ravdess")
     print(f"\niemocap rows: {len(iem_feats)}   ravdess rows: {len(rav_feats)}")
     return iem_feats, rav_feats
+
+
+@app.cell
+def _(mo):
+    mo.md("""
+    ## Cell 6 — Combine and filter
+
+    Joins the two feature tables into the one table everything downstream uses.
+    Which classes survive is decided from IEMOCAP counts alone, so RAVDESS
+    cannot keep alive a class that only really exists in acted speech. It also
+    drops any feature column one corpus never fills, since the model could
+    otherwise learn to tell which dataset a clip came from instead of learning
+    emotion. The combined table is written to disk and the rows per class per
+    source are printed.
+    """)
+    return
 
 
 @app.cell
@@ -562,16 +580,8 @@ def _(
     pd,
     rav_feats,
 ):
-    # =====================================================================
-    # CELL 7 — COMBINE
-    # Order matters here:
-    #   1. merge exc->hap (if enabled) before counting, so the merged class is
-    #      judged at its real size
-    #   2. pick surviving labels from IEMOCAP counts alone. RAVDESS shouldn't
-    #      rescue a class IEMOCAP can't support, or you get a class the
-    #      pipeline only recognises in acted speech.
-    #   3. filter both frames to that set, then concatenate
-    # =====================================================================
+    # Order matters: merge first so the merged class is counted at its real
+    # size, then pick surviving labels from IEMOCAP counts, then concatenate.
     META_COLS = ["utt_id", "path", "label", "raw_code", "speaker", "dialog",
                  "session", "source", "intensity", "statement"]
 
@@ -607,7 +617,7 @@ def _(
     feature_cols = [c for c in feature_cols
                     if pd.api.types.is_numeric_dtype(combined[c])]
     # a feature has to exist on both sides, otherwise the model can learn
-    # "which corpus is this" from a column one corpus never fills
+    # "which corpus is this"
     if len(_rav):
         _iem_ok = set(_iem.columns)
         _rav_ok = set(_rav.columns)
@@ -636,19 +646,25 @@ def _(
 
 
 @app.cell
+def _(mo):
+    mo.md("""
+    ## Cell 7 — Normalisation
+
+    Rescales every feature against its own group's baseline, so a speaker who is
+    simply loud stops looking angry. Grouping is per dialogue by default with
+    both speakers pooled, because that matches what the transcriber does at
+    inference when it z-scores across all the segments of one clip. Groups too
+    small for reliable statistics are left raw rather than normalised on noise.
+    Only features are touched and no labels are involved, so running this before
+    the split leaks nothing.
+    """)
+    return
+
+
+@app.cell
 def _(NORM_MIN_ROWS, NORM_SCOPE, NORM_STD_FLOOR, combined, feature_cols, pd):
-    # =====================================================================
-    # CELL 8 — SPEAKER / DIALOG NORMALISATION
-    # Features only, no labels, so running it before the split leaks nothing.
-    # It's the same transform V17 applies at inference, where there are no
-    # labels at all. What it buys: a speaker who is just loud stops looking
-    # angry, because every feature is relative to that speaker's (or that
-    # dialog's) own baseline.
-    #
     # RAVDESS has no dialogs, so its group key falls back to the actor under
-    # every scope. IEMOCAP rows get conversation-relative features, RAVDESS
-    # rows get actor-relative ones.
-    # =====================================================================
+    # every scope.
     def normalise(df, cols, scope, min_rows=4, std_floor=1e-6):
         if scope == "off":
             return df.copy(), False, {}
@@ -697,25 +713,23 @@ def _(NORM_MIN_ROWS, NORM_SCOPE, NORM_STD_FLOOR, combined, feature_cols, pd):
 
 
 @app.cell
+def _(mo):
+    mo.md("""
+    ## Cell 8 — Cross-validation protocol
+
+    Defines the evaluation every experiment below runs through. IEMOCAP's five
+    sessions are the folds: four train and one tests, and whole sessions leave
+    together so a conversation partner never ends up in both halves. RAVDESS
+    goes into every training fold at its weight and never into a test fold,
+    because the question being asked is whether the model works on conversation,
+    not on acted speech. Macro-F1 is reported alongside accuracy, since accuracy
+    alone rewards coasting on the biggest classes.
+    """)
+    return
+
+
+@app.cell
 def _(RandomForestClassifier, accuracy_score, f1_score, np, pd):
-    # =====================================================================
-    # CELL 9 — EVALUATION: leave-one-IEMOCAP-session-out
-    #
-    # Test folds are IEMOCAP only, RAVDESS stays in train. The question is
-    # whether the model works on conversational speech, and a pooled number
-    # that went up because it got better at studio-acted sentences answers a
-    # different question.
-    #
-    # Folds are whole sessions, so both speakers of a conversation leave
-    # together. Splitting on speaker alone leaves their partner's half of the
-    # same recording in train: same room, same mic, sometimes crosstalk.
-    #
-    # All RAVDESS rows go into every train fold, weighted. They're support, not
-    # held-out data.
-    #
-    # Reports macro-F1 as well as accuracy, because accuracy alone rewards
-    # coasting on neutral and frustrated, where IEMOCAP's mass sits.
-    # =====================================================================
     def run_cv(df, cols, ravdess_weight, rf_kwargs, verbose=True):
         iem = df[df["source"] == "iemocap"]
         rav = df[df["source"] == "ravdess"]
@@ -768,29 +782,32 @@ def _(RandomForestClassifier, accuracy_score, f1_score, np, pd):
 
 
 @app.cell
-def _(RandomForestClassifier, accuracy_score, f1_score, np, pd):
-    # =====================================================================
-    # CELL 9c — RAVDESS-ONLY BASELINE, SCORED ON THE SAME IEMOCAP FOLDS
-    #
-    # This is the fair comparison to the old 46.8% figure, which was measured
-    # on RAVDESS itself — same acted-speech domain the model was trained on.
-    # This instead trains only on RAVDESS and tests on the same 5 IEMOCAP
-    # leave-one-session-out folds CELL 9/10 use, so the row sits in the same
-    # table as the rest of the sweep.
-    #
-    # Caveat: this trains on the RAVDESS rows CELL 5 already filtered (calm
-    # dropped, song dropped) — the same rows CELL 10 uses as support. It is
-    # not a re-run of the original train_emotion.py, which likely kept calm
-    # and was only ever tested on RAVDESS. Read this as "how far does an
-    # acted-speech-only model get on conversation," not as reproducing 46.8%.
-    #
-    # RAVDESS never had frustrated/excited, so this model can never predict
-    # them — that's an out-of-vocabulary penalty, not confusion. Two numbers
-    # are reported per fold: accuracy/macro-F1 over IEMOCAP's full label
-    # space (frustrated/excited count as always-wrong, matching CELL 9's
-    # rules so the row is comparable), and the same pair restricted to the
-    # classes RAVDESS actually has a concept of.
-    # =====================================================================
+def _(mo):
+    mo.md("""
+    ## Cell 9 — RAVDESS-only baseline (testing)
+
+    This cell is for testing and reporting only. Nothing it produces feeds the
+    saved model. It trains on acted speech alone and scores it on the same five
+    conversational folds used everywhere else, which answers how far an
+    acted-speech-only model gets on real dialogue. Because RAVDESS never had
+    frustrated or excited, two pairs of numbers are printed per fold: one over
+    the full label space where those classes count as always wrong, and one
+    restricted to the classes RAVDESS actually has a concept of.
+    """)
+    return
+
+
+@app.cell
+def _(
+    RF_KWARGS,
+    RandomForestClassifier,
+    accuracy_score,
+    f1_score,
+    feature_cols,
+    norm_df,
+    np,
+    pd,
+):
     def run_ravdess_only_baseline(df, cols, rf_kwargs, verbose=True):
         iem = df[df["source"] == "iemocap"]
         rav = df[df["source"] == "ravdess"]
@@ -811,8 +828,8 @@ def _(RandomForestClassifier, accuracy_score, f1_score, np, pd):
             if te.empty:
                 continue
 
-            # Training set is identical every fold — IEMOCAP contributes
-            # nothing to this model, only to the test side.
+            # Training set is identical every fold; IEMOCAP only contributes
+            # to the test side.
             clf = RandomForestClassifier(**rf_kwargs)
             clf.fit(rav[cols].to_numpy(dtype=float), rav["label"].to_numpy())
 
@@ -876,14 +893,6 @@ def _(RandomForestClassifier, accuracy_score, f1_score, np, pd):
               f"{sorted(set(iem['label'].unique()) - set(rav_classes))}")
         return fold_df, pooled_full, pooled_overlap, truths_a, preds_a
 
-    return (run_ravdess_only_baseline,)
-
-
-@app.cell
-def _(RF_KWARGS, feature_cols, norm_df, run_ravdess_only_baseline):
-    # =====================================================================
-    # CELL 9d — RUN THE RAVDESS-ONLY BASELINE
-    # =====================================================================
     rav_only_folds, rav_only_full, rav_only_overlap, _ro_yt, _ro_yp = (
         run_ravdess_only_baseline(norm_df, feature_cols, RF_KWARGS)
     )
@@ -893,16 +902,22 @@ def _(RF_KWARGS, feature_cols, norm_df, run_ravdess_only_baseline):
 
 
 @app.cell
+def _(mo):
+    mo.md("""
+    ## Cell 10 — RAVDESS weight sweep (testing)
+
+    An experiment. It runs the whole
+    cross-validation once per candidate RAVDESS weight, with weight 0.0 acting
+    as the IEMOCAP-only baseline so the comparison is like for like. For each
+    weight it prints pooled accuracy, pooled macro-F1 and the spread across
+    folds. The best pooled score is reported but should not be trusted on its
+    own, which is what the fold spread column and the next cell are for.
+    """)
+    return
+
+
+@app.cell
 def _(RAVDESS_WEIGHT_SWEEP, RF_KWARGS, feature_cols, norm_df, pd, run_cv):
-    # =====================================================================
-    # CELL 10 — ABLATION: does RAVDESS help?
-    # weight 0.0 is the IEMOCAP-only baseline, same folds and hyperparameters
-    # with RAVDESS just absent, so the comparison is like for like.
-    #
-    # Chance is 1/n_classes. The old RAVDESS-only pipeline's 46.8% was measured
-    # on RAVDESS, so it isn't a like-for-like target. The comparison that
-    # matters here is weight 0.0 against weight > 0.0.
-    # =====================================================================
     sweep_rows, sweep_detail = [], {}
     for _w in RAVDESS_WEIGHT_SWEEP:
         _tag = "IEMOCAP only" if _w == 0.0 else f"+RAVDESS @ w={_w}"
@@ -949,19 +964,23 @@ def _(RAVDESS_WEIGHT_SWEEP, RF_KWARGS, feature_cols, norm_df, pd, run_cv):
 
 
 @app.cell
+def _(mo):
+    mo.md("""
+    ## Cell 11 — Choosing the weight (testing)
+
+    A diagnostic; the value it recommends is typed back into Cell 1 by hand, so
+    nothing here changes the model automatically. Rather than picking the best
+    pooled score, it asks a different question per weight: what is the worst
+    thing that happened to any single session compared with the no-RAVDESS
+    baseline. Weights that never hurt a fold are marked clean, and the best of
+    those by mean gain is reported. This rule exists because a pooled number can
+    be carried by one lucky fold while another session is quietly regressing.
+    """)
+    return
+
+
+@app.cell
 def _(RAVDESS_WEIGHT_SWEEP, pd, sweep_detail):
-    # =====================================================================
-    # CELL 10b — PICK BY WORST-CASE FOLD, NOT POOLED ARGMAX
-    #
-    # Pooled macro-F1 can be won by one lucky fold while others quietly
-    # regress -- that's what happened at w=1.0 in the coarse sweep, where
-    # session 3 alone (+0.057) carried a pooled number that session 5
-    # (-0.013) was actively working against. This asks a different question
-    # per weight: what is the worst thing that happened to any single
-    # session, relative to the w=0.0 baseline? The weight that maximises
-    # that worst case is the one where RAVDESS is never hurting a fold, not
-    # just helping on average.
-    # =====================================================================
     _base_folds = (sweep_detail[0.0][0]
                    .set_index("held_out_session")["macro_f1"])
 
@@ -1000,13 +1019,23 @@ def _(RAVDESS_WEIGHT_SWEEP, pd, sweep_detail):
 
 
 @app.cell
+def _(mo):
+    mo.md("""
+    ## Cell 12 — Per-class diagnostics (testing)
+
+    Reporting only; it inspects the cross-validation results at the chosen
+    weight and does not affect training. It prints recall, precision, support
+    and how often each class was predicted, worst recall first, followed by the
+    confusion matrix and the per-fold table. Recall is the number that matters
+    for this pipeline, because a class the model never predicts is a colour that
+    never appears on screen whatever the headline accuracy says. Any class that
+    was never predicted at all gets called out explicitly.
+    """)
+    return
+
+
+@app.cell
 def _(RAVDESS_WEIGHT, confusion_matrix, keep_labels, np, pd, sweep_detail):
-    # =====================================================================
-    # CELL 11 — PER-CLASS DIAGNOSTICS at the chosen weight
-    # Recall per class is what matters for this pipeline: a class the model
-    # never predicts is a colour that never appears on screen, whatever the
-    # headline accuracy says.
-    # =====================================================================
     _w_used = (RAVDESS_WEIGHT if RAVDESS_WEIGHT in sweep_detail
                else sorted(sweep_detail)[0])
     _folds, _yt, _yp = sweep_detail[_w_used]
@@ -1044,6 +1073,22 @@ def _(RAVDESS_WEIGHT, confusion_matrix, keep_labels, np, pd, sweep_detail):
 
 
 @app.cell
+def _(mo):
+    mo.md("""
+    ## Cell 13 — Fit the shipping model and save the bundle
+
+    Trains the model that actually ships, using everything: all five IEMOCAP
+    sessions plus weighted RAVDESS. The cross-validation above only estimated
+    how this model behaves on unseen speakers, it was never the model itself.
+    The result is saved as a joblib bundle containing the four keys the
+    transcriber reads, plus provenance such as the training date, row counts,
+    weight, protocol and CV scores, so the file can always say what it was
+    trained on.
+    """)
+    return
+
+
+@app.cell
 def _(
     EXTRACTOR,
     MERGE_EXCITED_INTO_HAPPY,
@@ -1062,17 +1107,6 @@ def _(
     sweep_df,
     time,
 ):
-    # =====================================================================
-    # CELL 12 — FIT THE SHIPPING MODEL + SAVE THE BUNDLE
-    # Everything gets used here: all 5 IEMOCAP sessions plus weighted RAVDESS.
-    # The CV above estimates how this model will behave on unseen speakers, it
-    # isn't the model itself.
-    #
-    # V17's CELL 6 reads 4 keys: clf, feature_cols, extractor,
-    # speaker_normalised. The rest is provenance. V17 ignores extra keys, and a
-    # model file that can't say what it was trained on is how the 60.6% figure
-    # ended up untraceable.
-    # =====================================================================
     _w = np.where(norm_df["source"].to_numpy() == "ravdess",
                   float(RAVDESS_WEIGHT), 1.0)
     _X = norm_df[feature_cols].to_numpy(dtype=float)
@@ -1083,12 +1117,12 @@ def _(
 
     _cv = sweep_df.loc[sweep_df["ravdess_weight"] == RAVDESS_WEIGHT]
     bundle = {
-        # --- the 4 keys V17 CELL 6 needs ---
+        # the 4 keys the transcriber needs
         "clf": clf_v3,
         "feature_cols": list(feature_cols),
         "extractor": EXTRACTOR,
         "speaker_normalised": bool(SPEAKER_NORMALISED),
-        # --- provenance, ignored by V17 ---
+        # provenance, ignored at inference
         "trained_at": time.strftime("%Y-%m-%d %H:%M:%S"),
         "trained_by": "train_emotionsV3.py",
         "classes": list(clf_v3.classes_),
@@ -1120,64 +1154,6 @@ def _(
     print(f"  cv: acc={bundle['cv_pooled_accuracy']} "
           f"macroF1={bundle['cv_pooled_macro_f1']}")
     print(f"  label space from IEMOCAP: {keep_labels}")
-    return
-
-
-@app.cell
-def _(mo):
-    mo.md("""
- 
-    """)
-    return
-
-
-@app.cell
-def _():
-    return
-
-
-@app.cell
-def _():
-    return
-
-
-@app.cell
-def _():
-    return
-
-
-@app.cell
-def _():
-    return
-
-
-@app.cell
-def _():
-    return
-
-
-@app.cell
-def _():
-    return
-
-
-@app.cell
-def _():
-    return
-
-
-@app.cell
-def _():
-    return
-
-
-@app.cell
-def _():
-    return
-
-
-@app.cell
-def _():
     return
 
 

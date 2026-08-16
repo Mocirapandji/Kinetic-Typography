@@ -1,0 +1,65 @@
+[Script Info]
+ScriptType: v4.00+
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+PlayResX: 1280
+PlayResY: 720
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Cap,Liberation Sans,48,&H00FFFFFF,&H000000FF,&H00000000,&H64000000,0,0,0,0,100,100,0,0,1,3,1,2,40,40,50,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.90,0:00:03.56,Cap,,0,0,0,,{\an1\pos(317.4,660)\fad(120,120)\org(358.6,650)\fnDejaVu Sans Condensed\fs49\c&H8D60CC&\b0\i0\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(0,240,\alpha&H00&)\t(0,79,\fscy111\fscx95)\t(79,158,\fscy91\fscx104)\t(158,239,\fscy100\fscx100)}So...
+Dialogue: 0,0:00:00.90,0:00:03.56,Cap,,0,0,0,,{\an1\pos(415.4,658.6)\fad(120,120)\fnDejaVu Sans Condensed\fs42\c&H9A77CC&\b0\i0\fsp1.55\fscx100\fscy100\frz0\alpha&H96&\t(601,741,\alpha&H00&)}this
+Dialogue: 0,0:00:00.90,0:00:03.56,Cap,,0,0,0,,{\an1\pos(491,658.6)\fad(120,120)\fnDejaVu Sans Condensed\fs42\c&H9A77CC&\b0\i0\fsp3.67\fscx100\fscy100\frz0\alpha&H96&\t(781,901,\alpha&H00&)}is
+Dialogue: 0,0:00:00.90,0:00:03.56,Cap,,0,0,0,,{\an1\pos(534.5,658.6)\fad(120,120)\fnDejaVu Sans Condensed\fs42\c&H9A77CC&\b0\i0\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(921,1041,\alpha&H00&)}a
+Dialogue: 0,0:00:00.90,0:00:03.56,Cap,,0,0,0,,{\an1\pos(564.7,658.6)\fad(120,120)\fnDejaVu Sans Condensed\fs42\c&H9A77CC&\b0\i0\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(1001,1281,\alpha&H00&)}video
+Dialogue: 0,0:00:00.90,0:00:03.56,Cap,,0,0,0,,{\an1\pos(663.4,658.6)\fad(120,120)\fnDejaVu Sans Condensed\fs42\c&H9A77CC&\b0\i0\fsp2.02\fscx100\fscy100\frz0\alpha&H96&\t(1321,1441,\alpha&H00&)}for
+Dialogue: 0,0:00:00.90,0:00:03.56,Cap,,0,0,0,,{\an1\pos(724.3,658.6)\fad(120,120)\fnDejaVu Sans Condensed\fs42\c&H9A77CC&\b0\i0\fsp3.36\fscx100\fscy100\frz0\alpha&H96&\t(1441,1561,\alpha&H00&)}my
+Dialogue: 0,0:00:00.90,0:00:03.56,Cap,,0,0,0,,{\an1\pos(792,658.6)\fad(120,120)\fnDejaVu Sans Condensed\fs42\c&H9A77CC&\b0\i0\fsp3.37\fscx100\fscy100\frz0\alpha&H96&\t(1601,2062,\alpha&H00&)}emotion.
+Dialogue: 0,0:00:04.06,0:00:06.37,Cap,,0,0,0,,{\an1\pos(445.9,660)\fad(120,120)\fnDejaVu Sans Condensed\fs46\c&H505FB2&\b0\i0\fsp0.88\fscx100\fscy100\frz0\alpha&H96&\t(0,201,\alpha&H00&)}So...
+Dialogue: 0,0:00:04.06,0:00:06.37,Cap,,0,0,0,,{\an1\pos(538.9,659.2)\fad(120,120)\fnDejaVu Sans Condensed\fs42\c&H5E6BB2&\b0\i0\fsp2.87\fscx100\fscy100\frz0\alpha&H96&\t(841,1001,\alpha&H00&)}this
+Dialogue: 0,0:00:04.06,0:00:06.37,Cap,,0,0,0,,{\an1\pos(619.7,659.2)\fad(120,120)\fnDejaVu Sans Condensed\fs42\c&H5E6BB2&\b0\i0\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(1021,1141,\alpha&H00&)}is
+Dialogue: 0,0:00:04.06,0:00:06.37,Cap,,0,0,0,,{\an1\pos(655.9,659.2)\fad(120,120)\fnDejaVu Sans Condensed\fs42\c&H5E6BB2&\b0\i0\fsp1.85\fscx100\fscy100\frz0\alpha&H96&\t(1121,1241,\alpha&H00&)}my
+Dialogue: 0,0:00:04.06,0:00:06.37,Cap,,0,0,0,,{\an1\pos(720.6,659.2)\fad(120,120)\fnDejaVu Sans Condensed\fs42\c&H5E6BB2&\b0\i0\fsp2.57\fscx100\fscy100\frz0\alpha&H96&\t(1281,1702,\alpha&H00&)}video.
+Dialogue: 0,0:00:07.29,0:00:13.21,Cap,,0,0,0,,{\an1\pos(160.9,610)\fad(120,120)\org(201.2,600.2)\fnDejaVu Sans Condensed\fs48\c&H9061CE&\b0\i0\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(0,240,\alpha&H00&)\t(0,80,\fscy108\fscx97)\t(80,160,\fscy94\fscx103)\t(160,240,\fscy100\fscx100)}So...
+Dialogue: 0,0:00:07.29,0:00:13.21,Cap,,0,0,0,,{\an1\pos(255.8,608.6)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&HA07DCE&\b0\i0\fsp2.56\fscx100\fscy100\frz0\alpha&H96&\t(720,860,\alpha&H00&)}this
+Dialogue: 0,0:00:07.29,0:00:13.21,Cap,,0,0,0,,{\an1\pos(333.7,608.6)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&HA07DCE&\b0\i0\fsp1.63\fscx100\fscy100\frz0\alpha&H96&\t(880,1000,\alpha&H00&)}is
+Dialogue: 0,0:00:07.29,0:00:13.21,Cap,,0,0,0,,{\an1\pos(372.3,608.6)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&HA07DCE&\b0\i0\fsp2.26\fscx100\fscy100\frz0\alpha&H96&\t(981,1101,\alpha&H00&)}my
+Dialogue: 0,0:00:07.29,0:00:13.21,Cap,,0,0,0,,{\an1\pos(436.4,608.6)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&HA07DCE&\b0\i0\fsp2.69\fscx100\fscy100\frz0\alpha&H96&\t(1141,1441,\alpha&H00&)}video
+Dialogue: 0,0:00:07.29,0:00:13.21,Cap,,0,0,0,,{\an1\pos(546.2,608.6)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&HA07DCE&\b0\i0\fsp1.1\fscx100\fscy100\frz0\alpha&H96&\t(1481,1601,\alpha&H00&)}for
+Dialogue: 0,0:00:07.29,0:00:13.21,Cap,,0,0,0,,{\an1\pos(603,608.6)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&H9F7BCE&\b0\i0\fsp3.65\fscx100\fscy100\frz0\alpha&H96&\t(1661,2161,\alpha&H00&)}emotion
+Dialogue: 0,0:00:07.29,0:00:13.21,Cap,,0,0,0,,{\an1\pos(768.8,608.6)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&HA07DCE&\b0\i0\fsp3.86\fscx100\fscy100\frz0\alpha&H96&\t(2221,2662,\alpha&H00&)}responsive
+Dialogue: 0,0:00:07.29,0:00:13.21,Cap,,0,0,0,,{\an1\pos(988.4,608.6)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&HA07DCE&\b0\i0\fsp3.65\fscx100\fscy100\frz0\alpha&H96&\t(2702,3022,\alpha&H00&)}kinetic
+Dialogue: 0,0:00:07.29,0:00:13.21,Cap,,0,0,0,,{\an1\pos(211.4,660)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&HA07DCE&\b0\i0\fsp4.86\fscx100\fscy100\frz0\alpha&H96&\t(3062,3723,\alpha&H00&)}typography...
+Dialogue: 0,0:00:07.29,0:00:13.21,Cap,,0,0,0,,{\an1\pos(491.5,660)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&HA07DCE&\b0\i0\fsp2.23\fscx100\fscy100\frz0\alpha&H96&\t(4283,4403,\alpha&H00&)}and
+Dialogue: 0,0:00:07.29,0:00:13.21,Cap,,0,0,0,,{\an1\pos(567.8,660)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&HA07DCE&\b0\i0\fsp0.73\fscx100\fscy100\frz0\alpha&H96&\t(4403,4523,\alpha&H00&)}all
+Dialogue: 0,0:00:07.29,0:00:13.21,Cap,,0,0,0,,{\an1\pos(616.9,660)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&HA07DCE&\b0\i0\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(4543,4663,\alpha&H00&)}the
+Dialogue: 0,0:00:07.29,0:00:13.21,Cap,,0,0,0,,{\an1\pos(678.9,660)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&HA07DCE&\b0\i0\fsp1.13\fscx100\fscy100\frz0\alpha&H96&\t(4643,4883,\alpha&H00&)}visual
+Dialogue: 0,0:00:07.29,0:00:13.21,Cap,,0,0,0,,{\an1\pos(787.8,660)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&HA07DCE&\b0\i0\fsp3.32\fscx100\fscy100\frz0\alpha&H96&\t(4964,5244,\alpha&H00&)}outputs
+Dialogue: 0,0:00:07.29,0:00:13.21,Cap,,0,0,0,,{\an1\pos(941.9,660)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&HA07DCE&\b0\i0\fsp2.81\fscx100\fscy100\frz0\alpha&H96&\t(5284,5404,\alpha&H00&)}I
+Dialogue: 0,0:00:07.29,0:00:13.21,Cap,,0,0,0,,{\an1\pos(964,660)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&HA07DCE&\b0\i0\fsp3.38\fscx100\fscy100\frz0\alpha&H96&\t(5364,5544,\alpha&H00&)}have.
+Dialogue: 0,0:00:13.21,0:00:14.21,Cap,,0,0,0,,{\an1\pos(584.7,660)\fad(120,120)\fnDejaVu Sans Condensed\fs41\c&H7E7580&\b0\i0\fsp3.11\fscx100\fscy100\frz0\alpha&H96&\t(0,341,\alpha&H00&)}Enjoy.
+Dialogue: 0,0:00:15.71,0:00:21.54,Cap,,0,0,0,,{\an1\pos(145.6,588.4)\fad(120,120)\fnLiberation Sans\fs41\c&HB1BACD&\b0\i0\fsp0.25\fscx100\fscy100\frz0\alpha&H96&\t(0,140,\alpha&H00&)}So
+Dialogue: 0,0:00:15.71,0:00:21.54,Cap,,0,0,0,,{\an1\pos(201,588.4)\fad(120,120)\fnLiberation Sans\fs41\c&HB1BACD&\b0\i0\fsp2.12\fscx100\fscy100\frz0\alpha&H96&\t(180,320,\alpha&H00&)}this
+Dialogue: 0,0:00:15.71,0:00:21.54,Cap,,0,0,0,,{\an1\pos(276.6,588.4)\fad(120,120)\fnLiberation Sans\fs41\c&HB1BACD&\b0\i0\fsp0\fscx100\fscy100\frz0\alpha&H96&\t(340,460,\alpha&H00&)}is
+Dialogue: 0,0:00:15.71,0:00:21.54,Cap,,0,0,0,,{\an1\pos(313.2,588.4)\fad(120,120)\fnLiberation Sans\fs41\c&HB1BACD&\b0\i0\fsp3.36\fscx100\fscy100\frz0\alpha&H96&\t(420,540,\alpha&H00&)}a
+Dialogue: 0,0:00:15.71,0:00:21.54,Cap,,0,0,0,,{\an1\pos(347,589.8)\fad(120,120)\org(404,580.7)\fnLiberation Sans\fs48\c&HA7B3CD&\b0\i0\fsp2.29\fscx100\fscy100\frz0\alpha&H96&\t(501,861,\alpha&H00&)\t(501,663,\fscy130\fscx89)\t(663,861,\fscy100\fscx100)}video
+Dialogue: 0,0:00:15.71,0:00:21.54,Cap,,0,0,0,,{\an1\pos(472.8,588.4)\fad(120,120)\fnLiberation Sans\fs41\c&HB1BACD&\b0\i0\fsp3.39\fscx100\fscy100\frz0\alpha&H96&\t(921,1061,\alpha&H00&)}for
+Dialogue: 0,0:00:15.71,0:00:21.54,Cap,,0,0,0,,{\an1\pos(535.8,588.4)\fad(120,120)\fnLiberation Sans\fs41\c&HB1BACD&\b0\i0\fsp4.55\fscx100\fscy100\frz0\alpha&H96&\t(1101,1281,\alpha&H00&)}my
+Dialogue: 0,0:00:15.71,0:00:21.54,Cap,,0,0,0,,{\an1\pos(603.8,588.6)\fad(120,120)\fnLiberation Sans\fs42\c&HAFB9CD&\b0\i0\fsp3.95\fscx100\fscy100\frz0\alpha&H96&\t(1441,1902,\alpha&H00&)}emotion
+Dialogue: 0,0:00:15.71,0:00:21.54,Cap,,0,0,0,,{\an1\pos(775.2,588.4)\fad(120,120)\fnLiberation Sans\fs41\c&HB1BACD&\b0\i0\fsp3.95\fscx100\fscy100\frz0\alpha&H96&\t(1982,2462,\alpha&H00&)}responsive
+Dialogue: 0,0:00:15.71,0:00:21.54,Cap,,0,0,0,,{\an1\pos(1001.8,588.4)\fad(120,120)\fnLiberation Sans\fs41\c&HB1BACD&\b0\i0\fsp4.13\fscx100\fscy100\frz0\alpha&H96&\t(2502,2842,\alpha&H00&)}kinetic
+Dialogue: 0,0:00:15.71,0:00:21.54,Cap,,0,0,0,,{\an1\pos(144.5,660)\fad(120,120)\org(296.6,650.9)\fnLiberation Sans\fs48\c&HA7B3CD&\b0\i0\fsp4.59\fscx100\fscy100\frz0\alpha&H96&\t(2882,3483,\alpha&H00&)\t(2882,3152,\fscy130\fscx89)\t(3152,3483,\fscy100\fscx100)}typography...
+Dialogue: 0,0:00:15.71,0:00:21.54,Cap,,0,0,0,,{\an1\pos(460.5,658.7)\fad(120,120)\fnLiberation Sans\fs41\c&HB1BACD&\b0\i0\fsp2.57\fscx100\fscy100\frz0\alpha&H96&\t(3823,3943,\alpha&H00&)}and
+Dialogue: 0,0:00:15.71,0:00:21.54,Cap,,0,0,0,,{\an1\pos(539.4,658.7)\fad(120,120)\fnLiberation Sans\fs41\c&HB1BACD&\b0\i0\fsp0.97\fscx100\fscy100\frz0\alpha&H96&\t(3983,4103,\alpha&H00&)}all
+Dialogue: 0,0:00:15.71,0:00:21.54,Cap,,0,0,0,,{\an1\pos(589.1,658.7)\fad(120,120)\fnLiberation Sans\fs41\c&HB1BACD&\b0\i0\fsp1.07\fscx100\fscy100\frz0\alpha&H96&\t(4123,4243,\alpha&H00&)}the
+Dialogue: 0,0:00:15.71,0:00:21.54,Cap,,0,0,0,,{\an1\pos(653.3,658.7)\fad(120,120)\fnLiberation Sans\fs41\c&HB1BACD&\b0\i0\fsp2.41\fscx100\fscy100\frz0\alpha&H96&\t(4243,4483,\alpha&H00&)}visual
+Dialogue: 0,0:00:15.71,0:00:21.54,Cap,,0,0,0,,{\an1\pos(771.5,658.7)\fad(120,120)\fnLiberation Sans\fs41\c&HB1BACD&\b0\i0\fsp3.6\fscx100\fscy100\frz0\alpha&H96&\t(4564,4844,\alpha&H00&)}outputs
+Dialogue: 0,0:00:15.71,0:00:21.54,Cap,,0,0,0,,{\an1\pos(926.8,658.7)\fad(120,120)\fnLiberation Sans\fs41\c&HB1BACD&\b0\i0\fsp1.74\fscx100\fscy100\frz0\alpha&H96&\t(4864,5004,\alpha&H00&)}that
+Dialogue: 0,0:00:15.71,0:00:21.54,Cap,,0,0,0,,{\an1\pos(1005,658.7)\fad(120,120)\fnLiberation Sans\fs41\c&HB1BACD&\b0\i0\fsp3.81\fscx100\fscy100\frz0\alpha&H96&\t(5024,5144,\alpha&H00&)}I
+Dialogue: 0,0:00:15.71,0:00:21.54,Cap,,0,0,0,,{\an1\pos(1029.1,658.7)\fad(120,120)\fnLiberation Sans\fs41\c&HB1BACD&\b0\i0\fsp3.38\fscx100\fscy100\frz0\alpha&H96&\t(5104,5284,\alpha&H00&)}have.
+Dialogue: 0,0:00:21.54,0:00:22.68,Cap,,0,0,0,,{\an1\pos(513.2,660)\fad(120,120)\fnLiberation Sans\fs40\c&HF2F2F2&\b0\i0\fsp2.58\fscx100\fscy100\frz0\alpha&H96&\t(0,201,\alpha&H00&)}Please
+Dialogue: 0,0:00:21.54,0:00:22.68,Cap,,0,0,0,,{\an1\pos(647.7,660)\fad(120,120)\fnLiberation Sans\fs40\c&HF2F2F2&\b0\i0\fsp4.43\fscx100\fscy100\frz0\alpha&H96&\t(241,541,\alpha&H00&)}enjoy.

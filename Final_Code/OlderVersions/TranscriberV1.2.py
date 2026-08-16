@@ -2030,128 +2030,18 @@ def _(os):
     AROUSAL_FEATURES = {"intensity_db": 1.0, "f0_mean": 0.6}
     AROUSAL_SPREAD = 1.5             # z at which the floor is ~76% of max
 
-    # ----- PER-EMOTION FLOOR BONUS (declare this if you use it) --
-    # Additive bonus on the floor for a given predicted emotion. This is a
-    # TASTE dial, not a measured one, and it is the exact move the audit
-    # warned about, so it ships at zero. If an A/B shows anger genuinely
-    # under-reads even after the arousal floor, raise it and say plainly in
-    # the write-up that one class was hand-weighted, because a mute test
-    # cannot otherwise separate "the mapping works" from "anger got more
-    # ink than the other six".
+
     EMOTION_FLOOR_BONUS = {"angry": 0.00, "disgust": 0.00, "fearful": 0.00,
                            "happy": 0.00, "neutral": 0.00, "sad": 0.00,
                            "surprised": 0.00}
 
-    # ----- SHOUTING DETECTION AND CASE --------------------------
-    # This is not a styling invention. DCMP's Captioning Key already
-    # prescribes it: mixed case is preferred for readability, capitals are
-    # used for screaming or shouting, and capitals must NOT be used for
-    # general emphasis. Human captioners apply that rule by listening. The
-    # contribution here is applying it from a measurement instead, which
-    # means the gate has to be vocal effort and NOT salience, NOT loudness
-    # on its own, and NOT the predicted emotion. Anger and shouting are
-    # different things: people shout when happy and are quietly furious.
-    #
-    # Because the standard restricts capitals to shouting, over-firing is
-    # the expensive error. Capitals cost readability (they strip the
-    # ascender and descender cues that word-shape recognition uses), and
-    # DCMP separately requires fonts that HAVE descenders, so a caption in
-    # permanent caps would violate the same guidance it is citing. The
-    # threshold is therefore set high and the coverage is reported.
-    # ----- TEMPORAL SMOOTHING OF EMOTION -------------------------
-    # Segments were classified independently, which quietly assumed a
-    # speaker's emotion is redrawn from scratch every sentence. Five angry
-    # sentences are five samples of one state, not five unrelated draws, and
-    # independent argmax makes the caption strobe through the palette on
-    # posterior differences (0.34 / 0.29 / 0.36) far smaller than the
-    # classifier's own error at 60.6 percent.
-    #
-    # "viterbi" runs a first-order HMM over the segment sequence: emissions
-    # are the posteriors, the transition matrix favours staying put, and the
-    # most likely PATH is decoded. It is confidence-weighted for free (a
-    # sharp segment overrules its neighbours, a flat one is carried by them)
-    # and it can only choose labels the classifier actually proposed.
-    #
-    # SELF_BIAS IS MEASURED, NOT GUESSED. Swept on four synthetic cases:
-    #   0.40-0.60  wobble collapses to one colour AND a confident (p=0.81)
-    #              one-segment outburst survives  <- the usable window
-    #   >=0.65     the same outburst is erased; the path pays two
-    #              transitions to visit it and the emission cannot cover it
-    #   all values a genuine sustained change (angry -> sad) survives
-    # 0.55 sits mid-window. A weak (p=0.45) outburst is erased at every
-    # value, which is the intended behaviour: at that confidence the
-    # classifier is barely distinguishing it from its neighbours anyway.
-    #
-    # Report this in the write-up. It changes what appears on screen, and a
-    # reader is entitled to know the caption shows a decoded state sequence
-    # rather than seven independent decisions.
-    # switched off. On fast multi-speaker dialogue (12 Angry Men)
-    # the smoother's "favour staying" assumption actively works against
-    # you -- it erased every single-segment angry outburst in a 51-segment
-    # test clip (6 segments where the RAW classifier picked angry as an
-    # outright winner, all overwritten to happy/disgust/surprised by the
-    # Viterbi path), because it cannot tell "one noisy segment" apart from
-    # "a different person just started talking, angrily." The notebook's
-    # own limitation note below was right: without diarisation, persistence
-    # assumptions don't hold across a speaker change. Re-enable ("viterbi")
-    # once/if speaker-aware smoothing (reset stay-bias at speaker
-    # boundaries) is in place -- see the diarization discussion.
     EMOTION_SMOOTH = "off"   # "viterbi" | "ema" | "off"
     # raised 0.55 -> 0.68. The swept "usable window" above (0.40-0.65)
-    # was chosen to protect a confident one-segment outburst from being
-    # erased -- but 0.55 sits close to a coin flip on the stay/switch
-    # decision, and with a 60%-accurate classifier that is not enough
-    # persistence to stop ordinary noise from flipping colour. Pushing
-    # self_bias alone past ~0.65 starts erasing genuine short outbursts
-    # (per the sweep above), so it is paired with here with a
-    # separate, duration-based guard (MIN_DWELL_S) that catches short
     # noisy runs self_bias would otherwise let through.
     EMOTION_SELF_BIAS = 0.68     # P(stay in the same emotion) per segment
-    # minimum on-screen duration for a smoothed colour run.
-    # self_bias is a PER-STEP cost -- it cannot distinguish a genuine
-    # two-segment outburst from one noisy segment sitting inside a long
-    # run. Duration is a different, complementary signal: a colour state
-    # that only lasted a fraction of a second is almost certainly
-    # classifier noise regardless of what self_bias decided when it let
-    # the switch through. enforce_min_dwell() (CELL 7) merges any run
-    # shorter than this into whichever neighbour has stronger emission
     # support. Set to 0.0 to disable and get pure self_bias behaviour.
     MIN_DWELL_S = 1.2
-    # Known limit: there is no diarisation, so the model treats a scene as
-    # one speaker. In a fast argument between two people the smoother will
-    # blend across a speaker change. For 12 Angry Men that is the main
-    # thing to watch, and it is a limitation to state rather than hide.
 
-    # ----- SPEAKER DIARIZATION -----------------------------------
-    # Directly targets the limitation named above. EMOTION_SELF_BIAS and
-    # MIN_DWELL_S have no way to tell "one noisy segment" apart from "a
-    # different person just started talking" -- both look identical to a
-    # sequence model with no speaker signal. Diarization supplies that
-    # signal: whisperx.DiarizationPipeline (a pyannote.audio wrapper)
-    # labels each word/segment with a speaker id, and CELL 9's alignment
-    # step folds that into `aligned`. smooth_segment_emotions then resets
-    # its stay-bias at every speaker change instead of applying it
-    # uniformly, so a genuine outburst that arrives with a new speaker is
-    # no longer suppressed by persistence logic meant for one continuous
-    # voice.
-    #
-    # pyannote's diarization model is GATED on HuggingFace:
-    #   1. Create a free account at https://huggingface.co
-    #   2. Visit and click "Agree and access repository" on BOTH:
-    #        https://huggingface.co/pyannote/speaker-diarization-3.1
-    #        https://huggingface.co/pyannote/segmentation-3.0
-    #      (the diarization pipeline depends on both models)
-    #   3. Generate a token at https://huggingface.co/settings/tokens
-    #      ("Read" access is enough)
-    #   4. Set it as an environment variable before launching marimo --
-    #      NOT as a literal string in this file, so it never ends up
-    #      committed to git or visible in a shared notebook:
-    #        export HF_TOKEN=hf_xxxxxxxxxxxxxxxxxxxxxxxx
-    #
-    # Degrades loudly rather than fatally if the token is missing or the
-    # model download fails: CELL 9 prints exactly why and continues
-    # without speaker labels, which reproduces the pre-diarization
-    # behaviour (speaker_ids=None everywhere -> no resets, same as before).
     DIARIZE_ENABLE = True
     HF_TOKEN = os.environ.get("HF_TOKEN")
     DIARIZE_MIN_SPEAKERS = None   # int, or None to let pyannote decide
@@ -7031,7 +6921,7 @@ def _(
     print(f"                  <stem>{PLAIN_SUFFIX}.mp4")
     print(f"  found now     : {[f.name for f in find_source_videos()]}")
     print("\ncall run_evaluation_batch() to render everything.")
-    return find_source_videos, run_evaluation_batch, safe_stem
+    return find_source_videos, safe_stem
 
 
 @app.cell
@@ -7270,218 +7160,14 @@ def _(
 
 
 @app.cell
+def _(process_any_video):
+    process_any_video("/home/s5812886/Downloads/pleasenjoy.wav", use_bg_video=False)
+    return
+
+
+@app.cell
 def _(run_plain_only_batch):
     run_plain_only_batch()
-    return
-
-
-@app.cell
-def _(mo):
-    mo.md("""
-    ### Running the batch
-
-    ```python
-    run_evaluation_batch()                      # everything in source_clips_raw/
-    run_evaluation_batch(only=["BreakingBad_Happy"])        # one stimulus
-    run_evaluation_batch(skip_existing=False)   # force re-render
-    run_evaluation_batch(normalise=False)       # skip the format pass
-    ```
-
-    Outputs land in `evaluationoutput/video/` as
-    `<stem>v19_withUniqueSubtitles.mp4` and
-    `<stem>v19_withoutUniqueSubtitles.mp4`, with the `.ass` files in
-    `evaluationoutput/ass/` and a `manifest_v19.csv` recording what was
-    rendered, from which source, with which emotions found and how many
-    caption lines resulted.
-
-    **Bumping `VERSION_TAG`**, so `skip_existing` will not
-    find the old `v18` pairs and the batch re-renders everything. That is
-    intended: the v18 files predate `merge_rapid_segments` and contain the
-    0.16-second captions.
-
-    Adding a stimulus is dropping a file into `source_clips_raw/` — the runner
-    globs the folder, so nothing here is keyed to a filename.
-    """)
-    return
-
-
-@app.cell
-def _(ASR_LOOP_MIN_REPEATS, run_evaluation_batch):
-    # CELL 27 — RE-RUN ONE STIMULUS  
-    # ---------------------------------------------------------------------
-    # BreakingBad(Happy) failed the v18 batch with "KeyError: Column not
-    # found: word" and then, once recovered, rendered twelve of seventeen
-    # captions for about 0.16 seconds each. Both causes are fixed upstream
-    # (CELL 1b, CELL 8a, merge_rapid_segments), so this cell exists mainly
-    # to re-render that one stimulus without waiting for the whole batch.
-    #
-    # REDO_ENABLE ships False. An auto-running render cell costs minutes on
-    # every notebook start and on every upstream edit, which is exactly the
-    # tax CELL 25 already charges -- one is enough. Flip it True when you
-    # want the render, and read the MERGE / FLASH / PAUSE lines in the
-    # output rather than watching the video to decide whether it worked.
-    #
-    # skip_existing=False matters: with VERSION_TAG at "v19" no v19 outputs
-    # exist yet, but leaving it True would silently skip the clip as soon
-    # as one render succeeds, which makes a second attempt look like a
-    # no-op.
-    REDO_ENABLE = False
-    REDO_STEM = "BreakingBad_Happy"
-
-    if not REDO_ENABLE:
-        print(f"CELL 27 idle (REDO_ENABLE=False). Set it True to re-render "
-              f"{REDO_STEM} alone, or call run_evaluation_batch() for the "
-              f"whole set.")
-        redo_manifest = None
-    elif ASR_LOOP_MIN_REPEATS < 6:
-        print(f"ASR_LOOP_MIN_REPEATS is {ASR_LOOP_MIN_REPEATS}, which is what "
-              f"deleted this clip's only segment in the first place. CELL 1b "
-              f"should be 6.")
-        redo_manifest = None
-    else:
-        redo_manifest = run_evaluation_batch(
-            only=[REDO_STEM], skip_existing=False)
-
-    redo_manifest
-    return
-
-
-@app.cell
-def _(run_evaluation_batch):
-    manifest = run_evaluation_batch()
-    manifest
-    return
-
-
-@app.cell
-def _(mo):
-    mo.md(r"""
-    ## Decision log
-
-    The logs for the earlier milestones live in their own files; this one covers
-    what changed here.
-
-    1. **A model bundle has to carry its own provenance.** The loader hardcoded
-        one path and read four keys, which meant the file could not say what it
-        was trained on — and that is precisely how the accuracy figure quoted
-        throughout this notebook became untraceable: no bundle recorded the
-        corpus, the fold protocol or the class count it was measured under, so
-        the number outlived the model it described. The search is now a list, not
-        a path, and twelve provenance keys are read defensively with `.get()`
-        because an older bundle has none of them and must still load. Every run
-        prints its own pedigree; a bundle without one says so. The fallback is
-        loud on purpose, since a silent fall back to the previous model is the
-        failure mode most likely to waste a render batch.
-
-    2. **The palette and the label space are checked against each other before
-        anything renders.** They are set in two different cells by two different
-        decisions and nothing verified they agreed. The style lookup defaults to
-        neutral in five places, which is deliberate — rendering must not crash
-        mid-batch — but it means a class the model emits and the palette lacks
-        renders as flat near-white, silently, forever. Three directions are
-        checked because they fail differently: a class with no style is fatal, a
-        style no class emits is inert but usually means the palette is stale, and
-        a shout trigger naming an unemittable class silently never fires.
-
-    3. **Two classes were added to the palette, and one unusable one was kept.**
-        The new label space carries `frustrated` and `excited`, so both needed
-        hues. `disgust` stays even though the model can rarely emit it: an unused
-        style entry is inert, a missing one is a silent neutral render. The
-        placements are marked as proposed rather than audited, and the recorded
-        consequence is stated — the published colour-distance figures were
-        computed for seven classes, so nine hues on the same wheel necessarily
-        lower the worst pair, and the audit cell needs re-running before this
-        feeds a study.
-
-    4. **Capitals went back to strict, and tiered.** The emotion-driven trigger
-        had been widened to four classes at the loosest sensitivity, which is
-        most of what made a clip shout constantly. Anger sits on the primary bar
-        and excitement is admitted only on a much higher one; happiness is
-        excluded because a happy line is not a shouted line, and frustration
-        because it is the sustained, quietly grinding kind of anger — exactly the
-        case the standard says must not be capitalised. The acoustic detector now
-        also gets an emotion veto, which reverses its original design principle
-        and is flagged as such next to the switch that restores it.
-
-    5. **The sensitivity presets exist so the tuning cannot be lost.** The
-        thresholds had been hardcoded numbers reasoned against a class count and
-        an accuracy that no longer applied, which is how "nobody remembers which
-        way we tuned this" happens. They are named presets now, an unknown value
-        raises rather than falling through, and the per-segment diagnostic
-        records which tier fired and which gate blocked.
-
-    6. **Silence became punctuation as well as space.** Widened letter spacing
-        has a ceiling: a wide gap and a very wide gap look nearly alike, and
-        neither conveys what a long pause does, which is *withhold* the next
-        word. A line like "Who should I kill … You" arriving whole hands the
-        caption reader the payload during the exact silence the speaker is using
-        to withhold it — the hearing audience waits and the caption reader does
-        not, which is an accessibility defect rather than a styling preference.
-        One measurement now drives two renderings on two thresholds: dots on the
-        same line at the lower one, dots plus a line break at the higher one.
-        Three periods rather than the ellipsis glyph, because libass renders the
-        single character inconsistently across the font families in use and the
-        layout measures what it draws.
-
-    7. **Both pause thresholds are reasoned, not measured, and say so.** They
-        come from typical fluent-speech inter-word intervals and from the region
-        where a silence stops reading as phrasing and starts reading as a held
-        pause. They need calibrating against the actual stimulus set before they
-        are anything more than design choices, and the renderer prints the split
-        count and the first few split points with their gaps for exactly that
-        purpose.
-
-    8. **`merge_rapid_segments` is the inverse of the pause splitter.** The
-        subtitle builder clamps every line to the next line's start, which
-        silently overrides the minimum line duration, so on rapid exclamatory
-        dialogue twelve of seventeen lines rendered for about a sixth of a second
-        each — burned in correctly and impossible to read. Merging is bounded by
-        a character cap so a merged line does not become its own reading-rate
-        problem, and it runs *before* the splitter so a genuinely long pause can
-        still cut the result. The two operate at different thresholds and must
-        not fight.
-
-    9. **The loop screen deleted a real stimulus, so it now has its own test.**
-        Digits are stripped before tokenising, so `$672,000` became nothing and
-        five consecutive "each"es read as a hallucination; the only segment was
-        dropped and the failure surfaced two stages later as a missing column.
-        The threshold rose and a coverage requirement was added — a hallucination
-        loop *is* the segment, genuine repetition sits inside other speech — and
-        the repeating-unit length is now derived from the token count rather than
-        hardcoded, because a fixed set of gram sizes was sized to the phrases
-        seen so far and cannot detect a longer cycle. A screen that can silently
-        remove a clip from a study gets a self-test on both the case it exists to
-        catch and the case that broke it.
-
-    10. **One pass, two renders, and that is a methodological point rather than
-        an optimisation.** The expensive stages are transcription, alignment,
-        prosody and per-segment classification; the render is comparatively free.
-        Running the pipeline once and rendering the styled result twice is not
-        only faster, it is the only way the pair is a valid comparison — the ASR
-        is not bit-deterministic, so two separate runs of the same file can
-        differ in segmentation, and the two conditions would then differ in
-        transcript *and* styling with no way to attribute an effect to either.
-
-    11. **What "plain" means is a study-design choice, so it is written down.**
-        The control's specification is explicit rather than implied by whatever
-        the flattening code happens to do, and a stricter variant exists that
-        also removes the pause marks, on the grounds that a silence is a timing
-        fact but an inserted ellipsis is still an editorial addition the
-        transcript did not contain.
-
-    12. **One confound is disclosed rather than hidden.** Absolute layout
-        measures text in order to place it, so a uniform font size can wrap lines
-        differently from a varied one. Line breaks may therefore differ between
-        the two conditions. That is inherent to the manipulation rather than a
-        bug, but it belongs in the write-up rather than a claim that the pair
-        differs only in styling.
-
-    13. **Bumping the version tag re-renders everything, which is correct.** The
-        tag drives every output filename and the skip check in the batch runner,
-        so a bump means the existing outputs are not found and the batch runs
-        again. The earlier outputs predate the merge fix and should not go in a
-        study.
-    """)
     return
 
 
