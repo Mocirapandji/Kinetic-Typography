@@ -4625,38 +4625,7 @@ def _(
     render_long_video,
     safe_stem,
 ):
-    # CELL 28 — PLAIN-ONLY BATCH, PURE SUBTITLES  (V20)
-    # ---------------------------------------------------------------------
-    # Paste as a NEW cell after CELL 26d (the batch runner). Nothing above
-    # is modified, so the existing withUniqueSubtitles renders and
-    # run_evaluation_batch() still behave exactly as before.
-    #
-    # Two changes relative to flatten_to_plain / run_evaluation_batch:
-    #
-    #  1. No pause marks. The unique condition puts "..." into the control on the
-    #     argument that a silence is a timing fact rather than a kinetic
-    #     one. For a pure-subtitle baseline that is still an editorial
-    #     insertion the transcript did not contain, so it goes. With
-    #     PURE_SPLIT_ON_PAUSES = False the whole pause stage is switched
-    #     off for this run, which also removes the pause-driven LINE BREAK
-    #     and the line_hold_until extension -- build_ass_events reads that
-    #     column regardless of pause_hold, so clearing the dots alone would
-    #     have left the control holding lines through silences.
-    #
-    #  2. No unique render. process_any_video always ends by burning the
-    #     kinetic version, which is the expensive half of the batch and is
-    #     not wanted here. render_long_video is stubbed out for the
-    #     duration of that call only, so the pipeline still produces the
-    #     styled dataframe the flattener needs, and the real renderer is
-    #     restored before the plain pass.
-    #
-    # NOTE ON COMPARABILITY: with PURE_SPLIT_ON_PAUSES = False the control
-    # is cut into caption lines differently from the unique condition
-    # (merge_rapid_segments still runs; split_on_long_pauses does not).
-    # That is the intended meaning of "pure", but it does mean the two
-    # conditions now differ in line boundaries as well as in styling. Set
-    # it True to keep the unique condition's boundaries and drop only the
-    # dots and the hold.
+
     import contextlib
 
     PURE_SPLIT_ON_PAUSES = False   # False = no pause dots, no pause splits
